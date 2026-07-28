@@ -1,0 +1,3 @@
+the header items are in wrong order ; about process work services
+
+add two more projects previous_projects\arco.md previous_projects\trading.md, these projects are more of a full stack web applciation read their detials and extract content related to automation and create case studies for them like for current projects, shape case studies that will focus more towards the automation part of these projects , also name then and write description like those as well, i will provide pictures and videos later 
