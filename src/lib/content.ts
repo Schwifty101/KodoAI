@@ -24,7 +24,7 @@ export const site = {
   wordmark: { light: "KODO", accent: "AI" },
   tagline: "IF IT'S MANUAL AND MEASURABLE, IT CAN BE AUTOMATED",
   sub: "Custom AI agents and internal software that take the repetitive work off your team, in any industry.",
-  email: "hello@sobanahmad.dev",
+  email: "hello@kodoai.xyz",
   location: ["Working worldwide."],
   cta: { label: "START A PROJECT", href: "#footer" },
 };
