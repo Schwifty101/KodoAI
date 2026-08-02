@@ -1,47 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Base URL: please change to your production domain if different -->
-  <url>
-    <loc>https://kodoai.xyz/</loc>
-    <lastmod>2026-08-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Case studies / work pages -->
-  <url>
-    <loc>https://kodoai.xyz/case-study/ai-voice-receptionist</loc>
-    <lastmod>2026-08-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://kodoai.xyz/case-study/automated-pre-call-brief-generator</loc>
-    <lastmod>2026-08-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://kodoai.xyz/case-study/ai-google-ads-automation</loc>
-    <lastmod>2026-08-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://kodoai.xyz/case-study/law-firm-operations-automation</loc>
-    <lastmod>2026-08-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <url>
-    <loc>https://kodoai.xyz/case-study/no-code-trading-automation</loc>
-    <lastmod>2026-08-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
+<urlset 
+    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <!-- Base URL: please change to your production domain if different -->
+    <url>
+        <loc>https://kodoai.xyz/</loc>
+        <lastmod>2026-08-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <!-- Case studies / work pages -->
+    <url>
+        <loc>https://kodoai.xyz/case-study/ai-voice-receptionist</loc>
+        <lastmod>2026-08-02</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://kodoai.xyz/case-study/automated-pre-call-brief-generator</loc>
+        <lastmod>2026-08-02</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://kodoai.xyz/case-study/ai-google-ads-automation</loc>
+        <lastmod>2026-08-02</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://kodoai.xyz/case-study/law-firm-operations-automation</loc>
+        <lastmod>2026-08-02</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://kodoai.xyz/case-study/no-code-trading-automation</loc>
+        <lastmod>2026-08-02</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
 </urlset>
