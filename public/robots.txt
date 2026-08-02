@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Point crawlers to the sitemap
+Sitemap: https://kodoai.xyz/sitemap.xml
+Host: kodoai.xyz
+
+# Crawl-delay is optional; Google ignores it but others may respect it
+# Crawl-delay: 10
