@@ -1,0 +1,54 @@
+;;
+;; Domain:     kodoai.xyz.
+;; Exported:   2026-08-03 16:58:52
+;;
+;; This file is intended for use for informational and archival
+;; purposes ONLY and MUST be edited before use on a production
+;; DNS server.  In particular, you must:
+;;   -- update the SOA record with the correct authoritative name server
+;;   -- update the SOA record with the contact e-mail address information
+;;   -- update the NS record(s) with the authoritative name servers for this domain.
+;;
+;; For further information, please consult the BIND documentation
+;; located on the following website:
+;;
+;; http://www.isc.org/
+;;
+;; And RFC 1035:
+;;
+;; http://www.ietf.org/rfc/rfc1035.txt
+;;
+;; Please note that we do NOT offer technical support for any use
+;; of this zone data, the BIND name server, or any other third-party
+;; DNS software.
+;;
+;; Use at your own risk.
+;; SOA Record
+kodoai.xyz	3600	IN	SOA	laila.ns.cloudflare.com. dns.cloudflare.com. 2053744293 10000 2400 604800 3600
+
+;; NS Records
+kodoai.xyz.	86400	IN	NS	laila.ns.cloudflare.com.
+kodoai.xyz.	86400	IN	NS	wesley.ns.cloudflare.com.
+
+;; A Records
+kodoai.xyz.	1	IN	A	216.198.79.1 ; cf_tags=cf-proxied:true
+
+;; CNAME Records
+www.kodoai.xyz.	1	IN	CNAME	21f5d10fb4013015.vercel-dns-017.com. ; cf_tags=cf-proxied:true
+
+;; MX Records
+kodoai.xyz.	3600	IN	MX	5 alt1.aspmx.l.google.com.
+kodoai.xyz.	3600	IN	MX	10 alt3.aspmx.l.google.com.
+kodoai.xyz.	3600	IN	MX	10 alt4.aspmx.l.google.com.
+kodoai.xyz.	3600	IN	MX	5 alt2.aspmx.l.google.com.
+kodoai.xyz.	3600	IN	MX	1 aspmx.l.google.com.
+
+;; TXT Records
+_dmarc.kodoai.xyz.	1	IN	TXT	"v=DMARC1; p=reject; sp=reject; adkim=s; aspf=s;"
+_dmarc.kodoai.xyz.	1	IN	TXT	"v=DMARC1; p=none; rua=mailto:hello@kodoai.xyz"
+*._domainkey.kodoai.xyz.	1	IN	TXT	"v=DKIM1; p="
+google._domainkey.kodoai.xyz.	1	IN	TXT	"v=DKIM1;k=rsa;p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvBl1MF8f9Ap7hhHSrSaZGRflQsuB4Cq987GF/akWXK/LQDPPdso6sZciopsShNEKo0TVUrIwBrs9Fj0VJjRg11RcpMMTwt6YGw9IUwHstcADWChge/0jDjqfFFP8JEaFkpQvZH5sAkdp9Nw1owGS6nAZP0tjYKPw7pLc9r5civUn33+/UgKVFVVWN7i7/6AYuTM" "p+P0v4iW7KsTpk+stfdXZj9WBOAzcJpQOPOn/9VlMjgF4JgcR1zhc6WyoQut8P0NyQ8Vzz/E+drrd2TbOsu8EZ5zm+oBLh1pYcaIfzyDnQ2qCUmZPDCSO+9600T7VvJkSrqsuP81ZwWZPdQGuMQIDAQAB"
+kodoai.xyz.	3600	IN	TXT	"google-site-verification=PumxKqLnW4h8yHE4Wr12A-dXoGGxpyStOuftp_rniSw"
+kodoai.xyz.	3600	IN	TXT	"v=spf1 include:_spf.google.com ~all"
+kodoai.xyz.	3600	IN	TXT	"google-site-verification=pz8hTJyMywu-gKF5N1PPTJaP8lAB4ttOHG0Ff87PyGc"
+_vercel.kodoai.xyz.	1	IN	TXT	"vc-domain-verify=www.kodoai.xyz,35f3ba1f9060722fe9ac"
