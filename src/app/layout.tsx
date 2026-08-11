@@ -26,16 +26,16 @@ const plexMono = IBM_Plex_Mono({
   display: "swap",
 });
 
-const SITE_URL = "https://kodoai.dev";
+const SITE_URL = "https://www.kodoai.xyz";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "kodoAI — If it's manual and measurable, it can be automated",
+  title: "Custom AI Automation and Orchestration Systems | KodoAI",
   description: site.sub,
   applicationName: site.name,
   openGraph: {
-    title: "kodoAI — Automation Agency",
-    description: site.sub,
+    title: "KodoAI | Custom AI Systems for Work That Should Not Stay Manual",
+    description: "We turn slow, fragmented workflows into reliable systems that capture, check, route and complete work across your existing stack.",
     url: SITE_URL,
     siteName: site.name,
     images: ["/reference/banner.png"],

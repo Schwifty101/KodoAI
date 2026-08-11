@@ -22,11 +22,11 @@ export type QA = { q: string; a: string };
 export const site = {
   name: "kodoAI",
   wordmark: { light: "KODO", accent: "AI" },
-  tagline: "IF IT'S MANUAL AND MEASURABLE, IT CAN BE AUTOMATED",
-  sub: "Custom AI agents and internal software that take the repetitive work off your team, in any industry.",
-  email: "hello@kodoai.xyz",
+  tagline: "BUILD THE SYSTEM YOUR TEAM KEEPS RUNNING BY HAND",
+  sub: "KodoAI builds custom AI agents, internal software and governed automations that connect your tools, move work forward and keep people in control of high-stakes decisions.",
+  email: "soban@kodoai.xyz",
   location: ["Working worldwide."],
-  cta: { label: "START A PROJECT", href: "#footer" },
+  cta: { label: "SHOW US THE WORKFLOW", href: "#footer" },
 };
 
 export const nav: NavLink[] = [
