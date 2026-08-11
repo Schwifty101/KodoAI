@@ -748,6 +748,7 @@ export const legalIntakePage = {
       tail: "ONE CONTROL POINT.",
       tailAccent: false,
     } as CSHeading,
+    columns: { stage: "Stage", whatHappens: "What happens", controlPoint: "Control point" },
     rows: [
       { stage: "Minimal capture", whatHappens: "Approved channels create or update one prospect record", controlPoint: "Safe contact, consent, source and duplicate checks" },
       { stage: "Conflict preparation", whatHappens: "Authorised records are searched using normalised parties and entities", controlPoint: "Possible matches shown with source evidence" },
@@ -897,9 +898,9 @@ export default function LegalIntakeView() {
             <table className="w-full min-w-[720px] border-collapse font-mono text-sm">
               <thead>
                 <tr className="border-b border-border bg-surface text-left uppercase tracking-widest text-ink-3">
-                  <th className="p-4 text-xs font-medium">Stage</th>
-                  <th className="p-4 text-xs font-medium">What happens</th>
-                  <th className="p-4 text-xs font-medium">Control point</th>
+                  <th className="p-4 text-xs font-medium">{p.orchestration.columns.stage}</th>
+                  <th className="p-4 text-xs font-medium">{p.orchestration.columns.whatHappens}</th>
+                  <th className="p-4 text-xs font-medium">{p.orchestration.columns.controlPoint}</th>
                 </tr>
               </thead>
               <tbody>
