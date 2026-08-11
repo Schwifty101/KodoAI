@@ -72,7 +72,7 @@ relative to any other existing section.
 - `src/app/legal-intake/page.tsx` — new static route. Same chrome pattern as
   `src/app/case-study/[slug]/page.tsx`: `<Header links={HOME_NAV} logoHref="/" />`
   + view + `<Footer />`. `Footer`'s existing `navHref` helper already rewrites
-  bare `#anchor` hrefs to `/#anchor` off the homepage, so it needs no changes.
+    bare `#anchor` hrefs to `/#anchor` off the homepage, so it needs no changes.
 - `src/components/legal-intake/LegalIntakeView.tsx` — subpage view, structured
   like `CaseStudyView.tsx` (hero → intro → capability cards → orchestration
   table → industry fit → CTA), same `.cs-reveal`/`.cs-section` GSAP fade-up
@@ -262,8 +262,7 @@ export const faq: QA[] = [
 ];
 ```
 
-`faqEyebrow` (`"// FAQ"`) and `faqIntro` (`"Everything clients ask before
-starting."`) are unchanged — not sourced differently by the doc.
+`faqEyebrow` (`"// FAQ"`) and `faqIntro` (`"Everything clients ask before starting."`) are unchanged — not sourced differently by the doc.
 
 ### `finalCta` (content.ts) — the Footer's built-in final CTA block
 
