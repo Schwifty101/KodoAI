@@ -76,7 +76,7 @@ export default function MobileNav({
     <div
       id="mobile-menu"
       inert={!open}
-      className={`fixed inset-0 z-[60] overflow-y-auto bg-bg transition-opacity duration-500 md:hidden ${
+      className={`fixed inset-0 z-[60] overflow-y-auto bg-bg transition-opacity duration-500 xl:hidden ${
         open ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
       }`}
       style={{ transitionTimingFunction: ease }}
@@ -188,7 +188,7 @@ export default function MobileNav({
         aria-controls="mobile-menu"
         aria-expanded={open}
         onClick={() => setOpen(true)}
-        className="header-item group inline-flex h-11 w-11 flex-col items-center justify-center gap-[6px] md:hidden"
+        className="header-item group inline-flex h-11 w-11 flex-col items-center justify-center gap-[6px] xl:hidden"
       >
         <span className="h-[2px] w-7 bg-ink transition-colors group-hover:bg-accent" />
         <span className="h-[2px] w-7 bg-ink transition-colors group-hover:bg-accent" />

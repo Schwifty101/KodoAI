@@ -61,7 +61,7 @@ export default function Header({
         </a>
 
         {/* center nav */}
-        <nav className="hidden items-center gap-8 md:flex" aria-label="Primary">
+        <nav className="hidden items-center gap-8 xl:flex" aria-label="Primary">
           {links.map((l) => (
             <a key={l.href} href={l.href} className="header-item eyebrow nav-fill px-3 py-2">
               {l.label}
@@ -69,8 +69,8 @@ export default function Header({
           ))}
         </nav>
 
-        {/* CTA — desktop only; the hamburger takes its place below md */}
-        <Button href={site.cta.href} primary arrow className="header-item hidden md:inline-flex">
+        {/* CTA — desktop only; the hamburger takes its place below xl */}
+        <Button href={site.cta.href} primary arrow className="header-item hidden xl:inline-flex">
           {site.cta.label}
         </Button>
 
