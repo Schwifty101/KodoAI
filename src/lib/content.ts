@@ -43,20 +43,20 @@ export const socials: Social[] = [
 // -- 01 Hero -------------------------------------------------------------------
 
 export const hero = {
-  eyebrow: "// FULL STACK AI AUTOMATION",
-  headline: "IF IT'S MANUAL AND MEASURABLE, IT CAN BE AUTOMATED.",
-  sub: "Custom AI agents and internal software for any business: operations, sales, support, finance, marketing.",
+  eyebrow: "// CUSTOM AI AUTOMATION AND ORCHESTRATION",
+  headline: "BUILD THE SYSTEM YOUR TEAM KEEPS RUNNING BY HAND.",
+  sub: "KodoAI designs custom AI agents and internal software for processes that lose time, revenue or control between tools. We connect the stack you already use, automate the repeatable work, and keep human approval wherever judgement or risk demands it.",
 };
 
 // -- 02 Quotation --------------------------------------------------------------
 
 export const quotation = {
   eyebrow: "// OUR THESIS",
-  text: "EVERY PROCESS YOUR TEAM STILL RUNS BY HAND IS PAID FOR TWICE: ONCE IN HOURS, AGAIN IN THE WORK IT CROWDS OUT. WE FIND THE MOST EXPENSIVE ONE, AND WE REMOVE IT.",
+  text: "EVERY PROCESS YOUR TEAM RUNS BY HAND LEAKS VALUE AT EVERY HANDOFF. WE BUILD THE LAYER THAT CATCHES IT, AND KEEP A PERSON IN CONTROL WHERE THE DECISION SHOULD NOT BE AUTOMATED.",
   // Phrases must include their trailing punctuation: splitWords matches them as
   // literal substrings, so a stray ":" would break off into its own word.
-  highlights: ["PAID FOR TWICE:", "REMOVE IT."],
-  attribution: "KODOAI · AUTOMATION AGENCY",
+  highlights: ["EVERY HANDOFF.", "SHOULD NOT BE AUTOMATED."],
+  attribution: "KODOAI · AI AUTOMATION AND ORCHESTRATION",
 };
 
 // -- 03 Process Timeline -------------------------------------------------------
