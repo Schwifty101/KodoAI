@@ -166,6 +166,42 @@ export const governance: GovernancePrinciple[] = [
   },
 ];
 
+// -- 05c Engagement Model --------------------------------------------------------
+
+export type EngagementStep = { n: string; title: string; desc: string; ctaLabel: string };
+
+export const engagementEyebrow = "// START WITH ONE EXPENSIVE WORKFLOW";
+export const engagementHeading = {
+  lead: "WE DO NOT BEGIN WITH",
+  accent: "A LIST OF AI FEATURES.",
+};
+export const engagementIntro =
+  "We begin with one process that is slow, fragmented or too dependent on a few experienced people. Then we test whether a custom system can create enough value to justify its cost.";
+
+export const engagementSteps: EngagementStep[] = [
+  {
+    n: "01",
+    title: "WORKFLOW AUDIT",
+    desc: "Map the current process, quantify the leakage and identify the smallest useful intervention.",
+    ctaLabel: "START WITH AN AUDIT",
+  },
+  {
+    n: "02",
+    title: "CONTROLLED PILOT",
+    desc: "Run one channel, team or workflow in shadow mode. Compare its output with the current process before expanding its authority.",
+    ctaLabel: "SCOPE A PILOT",
+  },
+  {
+    n: "03",
+    title: "PRODUCTION SYSTEM",
+    desc: "Integrate the validated workflow, add monitoring and support the rules, models and APIs after launch.",
+    ctaLabel: "DISCUSS A PRODUCTION BUILD",
+  },
+];
+
+export const engagementSelectivity =
+  "Custom software is not the answer to every manual process. We take on work where the bottleneck is measurable, the process owner is involved and the expected value supports a maintained system.";
+
 // -- 06 Q&A --------------------------------------------------------------------
 
 export const faqEyebrow = "// FAQ";
