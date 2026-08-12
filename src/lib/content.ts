@@ -138,36 +138,36 @@ export const faqIntro = "Everything clients ask before starting.";
 
 export const faq: QA[] = [
   {
-    q: "What kind of work do you actually automate?",
-    a: "Anything manual and measurable, in any industry. Quoting, onboarding, intake, reporting, document processing, data entry between systems that don't talk, support and phone coverage, research and prep, ad operations. If it follows rules, repeats, and someone can describe it, it can usually be built.",
+    q: "What kind of work do you automate?",
+    a: "We focus on repeatable operational workflows with clear inputs, rules, handoffs and outcomes. Typical projects include intake, qualification, routing, document processing, research, internal tools, reporting and cross-system coordination.",
   },
   {
-    q: "How do we get started?",
-    a: "With an audit of one workflow. We sit with the people who run it, map every step and handoff, and put hours and costs against it. If it's worth building, we scope from there: audit, build, then retain. If it isn't, we'll say so.",
-  },
-  {
-    q: "Is this just AI wrappers, or real software?",
-    a: "Real software. We use models where judgement is genuinely needed (reading messy documents, drafting, classifying, holding a conversation) and plain deterministic code everywhere else, because it's cheaper, faster, and doesn't hallucinate. Most builds are mostly ordinary engineering with agents at the edges.",
-  },
-  {
-    q: "Will an agent do something it shouldn't?",
-    a: "Nothing that touches money, customers, or production data moves without a human approval gate wherever you want one, and the system degrades gracefully instead of guessing. Failures raise alerts rather than silently dropping work. The safety layer is the point, not an afterthought.",
+    q: "Is this an AI wrapper or custom software?",
+    a: "It is custom software built around the workflow. AI models may handle conversation, extraction or summarisation. The surrounding system handles permissions, integrations, business rules, approvals, logging, retries and monitoring.",
   },
   {
     q: "How is this different from an off-the-shelf tool or Zapier?",
-    a: "Products make you adapt to their idea of your process, and break at the edge cases that make your business yours. We build into your exact workflow, stack, and branding, own the edge cases, and pass every API or third-party cost through at zero markup.",
+    a: "Off-the-shelf tools work well when the process is standard and each step fits a supported trigger. We are useful when the workflow crosses several systems, depends on your specific rules, contains material exceptions or needs stronger control over how decisions are made and recorded.",
   },
   {
-    q: "What does it cost?",
-    a: "Single-system builds run a few thousand dollars one-time; ongoing monitoring is a monthly retainer, and every API or third-party cost passes through at zero markup. Every proposal comes with a payback period. If we can't show the system paying for itself, we'll tell you not to build it.",
+    q: "Do you replace our current software?",
+    a: "Usually not. We prefer to connect the CRM, database, phone system, payment service and other tools your team already relies on. We only recommend replacing a system when integration limits make the outcome unreliable or uneconomic.",
   },
   {
-    q: "How long does a build take, and what happens after?",
-    a: "The audit is same-week; most builds ship in 2 to 6 weeks (a full platform like AR&CO took 12). After launch it's monitoring, alerts, and monthly tuning: the automation is an asset we keep compounding.",
+    q: "How do you keep an agent from doing something it should not?",
+    a: "We define allowed actions, apply deterministic checks, restrict permissions and place approval gates before high-impact steps. We also log activity and create safe failure paths for unavailable systems, incomplete information and uncertain model output.",
   },
   {
-    q: "We're not an agency. Does that matter?",
-    a: "No. Agencies were where we started and they're still a big part of the work, but the method is industry-agnostic: find the most expensive manual process, quantify it, remove it. Clinics, e-commerce, professional services, and software teams all have the same problem in different clothes.",
+    q: "What does a project cost?",
+    a: "Cost depends on workflow depth, number of integrations, data sensitivity and exception logic. We scope the smallest build that can prove the business case, then price production work and ongoing support against that scope. The audit makes the investment and expected payback visible before development begins.",
+  },
+  {
+    q: "How long does a build take?",
+    a: "A focused pilot can move quickly when the workflow owner, access and test data are available. A multi-system production build takes longer because rules, permissions, edge cases and failure paths have to be tested. We set milestones after the audit rather than offering a universal timeline.",
+  },
+  {
+    q: "Do you work only with law firms?",
+    a: "No. KodoAI builds automation and orchestration systems across industries. Legal intake is a specialised capability within the broader practice, shaped by our experience building legal operations software and approval-gated systems.",
   },
 ];
 
