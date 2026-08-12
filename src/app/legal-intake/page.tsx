@@ -9,11 +9,11 @@ import type { NavLink } from "@/lib/content";
 const HOME_NAV: NavLink[] = [{ label: "HOME", href: "/" }];
 
 export const metadata: Metadata = {
-  title: "Governed Legal Intake — kodoAI",
+  title: "Governed Legal Intake: kodoAI",
   description:
     "The integration and decision-governance layer between your AI receptionist, practice-management system, conflict records and engagement workflow.",
   openGraph: {
-    title: "Governed Legal Intake — kodoAI",
+    title: "Governed Legal Intake: kodoAI",
     description:
       "The integration and decision-governance layer between your AI receptionist, practice-management system, conflict records and engagement workflow.",
     type: "article",
