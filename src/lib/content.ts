@@ -175,9 +175,9 @@ export const faq: QA[] = [
 
 export const finalCta = {
   eyebrow: "// READY WHEN YOU ARE",
-  lead: "IN A BUSINESS, MANUAL WORK ISN'T SLOW.",
-  accent: "IT'S MONEY LEAKING IN REAL TIME.",
-  ctaLabel: "LET'S AUTOMATE",
+  lead: "FIND THE WORKFLOW COSTING YOU THE MOST.",
+  accent: "THEN DECIDE IF IT'S WORTH FIXING.",
+  ctaLabel: "SHOW US THE WORKFLOW",
 };
 
 // Cal.com booking (element-click popup). The CTA opens this event in a modal.
@@ -204,8 +204,8 @@ export const footer = {
   ] as NavLink[],
   socialsHeading: "SOCIALS",
   ctaEyebrow: "// START A PROJECT",
-  ctaLabel: "LET'S AUTOMATE",
-  copyright: "© 2026 KODOAI",
-  tagline: "// IF IT'S MANUAL AND MEASURABLE, IT CAN BE AUTOMATED",
+  ctaLabel: "SHOW US THE WORKFLOW",
+  copyright: "© 2026 KODOAI. ALL RIGHTS RESERVED.",
+  tagline: "// KODOAI: CUSTOM AI AUTOMATION AND ORCHESTRATION SYSTEMS",
   backToTop: "BACK TO TOP",
 };
