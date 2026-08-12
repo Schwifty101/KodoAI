@@ -5,7 +5,8 @@ import { useLenis } from "lenis/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
-import type { CaseStudy, CSCard, CSHeading } from "@/lib/caseStudies";
+import type { CaseStudy, CSCard } from "@/lib/caseStudies";
+import { Eyebrow, Heading } from "@/components/ui/SectionPrimitives";
 import BookCallButton from "@/components/ui/BookCallButton";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -269,30 +270,6 @@ export default function CaseStudyView({ cs }: { cs: CaseStudy }) {
 /** Big/bold section headline, matching the site's Highlights/Footer scale. */
 const SECTION_H =
   "cs-reveal font-display text-[clamp(44px,7.5vw,104px)] font-extrabold uppercase leading-[0.88] tracking-tight text-ink";
-
-/** Mono `//` label with the accent bar, matching the footer eyebrow. */
-function Eyebrow({ children, className = "" }: { children: React.ReactNode; className?: string }) {
-  return (
-    <p className={`eyebrow flex items-center gap-2 ${className}`}>
-      <span className="h-[8px] w-[8px] bg-accent" aria-hidden />
-      {children}
-    </p>
-  );
-}
-
-/** Multi-line display heading; the tail line is accent or muted. */
-function Heading({ h, className = "" }: { h: CSHeading; className?: string }) {
-  return (
-    <h2 className={className}>
-      {h.lead.map((l) => (
-        <span key={l} className="block">
-          {l}
-        </span>
-      ))}
-      <span className={`block ${h.tailAccent ? "text-accent" : "text-muted"}`}>{h.tail}</span>
-    </h2>
-  );
-}
 
 function TagRow({ tags, className = "" }: { tags: string[]; className?: string }) {
   return (
