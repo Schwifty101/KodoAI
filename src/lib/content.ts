@@ -32,8 +32,10 @@ export const site = {
 export const nav: NavLink[] = [
   { label: "ABOUT", href: "#quotation" },
   { label: "PROCESS", href: "#process" },
+  { label: "LEGAL INTAKE", href: "/legal-intake" },
   { label: "WORK", href: "#projects" },
   { label: "SERVICES", href: "#services" },
+  { label: "FAQS", href: "#faq" },
 ];
 
 export const socials: Social[] = [
@@ -264,8 +266,10 @@ export const footer = {
   nav: [
     { label: "ABOUT", href: "#quotation" },
     { label: "PROCESS", href: "#process" },
+    { label: "LEGAL INTAKE", href: "/legal-intake" },
     { label: "WORK", href: "#projects" },
     { label: "SERVICES", href: "#services" },
+    { label: "FAQS", href: "#faq" },
     { label: "CONTACT", href: "#footer" },
   ] as NavLink[],
   detailsHeading: "STUDIO DETAILS",
