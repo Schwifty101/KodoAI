@@ -131,6 +131,41 @@ export const services: Service[] = [
   },
 ];
 
+// -- 05b Governance ----------------------------------------------------------
+
+export type GovernancePrinciple = { title: string; desc: string };
+
+export const governanceEyebrow = "// CONTROL WHERE IT MATTERS";
+export const governanceHeading = {
+  lead: "AI CAN INTERPRET THE WORK.",
+  accent: "IT SHOULD NOT QUIETLY OWN THE RISK.",
+};
+export const governanceIntro =
+  "We separate probabilistic tasks from controlled decisions. An AI model can extract names, summarise an inquiry or identify missing information. Deterministic rules decide which action is allowed next. High-impact actions wait for the right person.";
+
+export const governance: GovernancePrinciple[] = [
+  {
+    title: "APPROVAL GATES",
+    desc: "Define who can approve customer, financial, legal or operational actions before anything moves downstream.",
+  },
+  {
+    title: "LEAST-PRIVILEGE ACCESS",
+    desc: "Give each service and user only the data and permissions required for its job.",
+  },
+  {
+    title: "TRACEABLE DECISIONS",
+    desc: "Record source data, system actions, rule versions, exceptions and human overrides for review.",
+  },
+  {
+    title: "SAFE FAILURE PATHS",
+    desc: "Stop, queue and alert when a required system is unavailable or the result is too uncertain to act on.",
+  },
+  {
+    title: "MAINTAINABLE RULES",
+    desc: "Document, test and version the operational logic so it can change with the business instead of becoming hidden technical debt.",
+  },
+];
+
 // -- 06 Q&A --------------------------------------------------------------------
 
 export const faqEyebrow = "// FAQ";

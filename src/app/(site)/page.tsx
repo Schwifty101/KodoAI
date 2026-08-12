@@ -4,6 +4,7 @@ import ProcessTimeline from "@/components/sections/ProcessTimeline";
 import LegalIntakeTeaser from "@/components/sections/LegalIntakeTeaser";
 import Projects from "@/components/sections/Projects";
 import Services from "@/components/sections/Services";
+import Governance from "@/components/sections/Governance";
 import FAQ from "@/components/sections/FAQ";
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
         <LegalIntakeTeaser />
         <Projects />
         <Services />
+        <Governance />
         <FAQ />
       </div>
     </>
