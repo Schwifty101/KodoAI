@@ -67,26 +67,26 @@ export const process: ProcessPhase[] = [
   {
     n: "01",
     title: "WE AUDIT",
-    body: "It starts with a teardown of one workflow: the quote that takes three days, the report rebuilt every Monday, the inbox nobody owns, the ad account nobody has time to watch. We sit with the people who actually run it and map every step, handoff, and wait. No pitch, just proof.",
-    chips: ["WORKFLOW MAP", "TIME AUDIT", "HANDOFF TEARDOWN"],
+    body: "We sit with the people who run the process and map every step, tool, handoff, wait and exception. The goal is to find the point where delay or rework costs the most.",
+    chips: ["WORKFLOW MAP", "EXCEPTION REGISTER", "ACCESS MAP"],
   },
   {
     n: "02",
     title: "WE QUANTIFY",
-    body: "Every step gets a number: hours burned per month, what the delay costs in lost deals or churn, what a fix is worth, and how fast it pays for itself. You see the ROI before we write a line of code, and sometimes the honest answer is that the process just needs deleting.",
-    chips: ["ROI MODEL", "COST OF DELAY", "PAYBACK PERIOD"],
+    body: "We measure the hours lost, opportunities missed, error risk and the value of a faster outcome. If the process does not justify a custom build, we will say so.",
+    chips: ["COST-OF-DELAY MODEL", "BUILD VS BUY", "PILOT SCOPE"],
   },
   {
     n: "03",
     title: "WE BUILD",
-    body: "We build into your stack, not around it: your CRM, your database, your spreadsheets, your tools, your branding. Agents where judgement is needed, plain deterministic code where it is not. Human approval gates on anything that touches money or customers, full autonomy on the rest.",
-    chips: ["CUSTOM AGENTS", "STACK INTEGRATION", "APPROVAL GATES"],
+    body: "We use AI where context and extraction matter, and deterministic code where the same input must always produce the same action. Sensitive decisions stay behind explicit approval gates.",
+    chips: ["CUSTOM AGENTS", "STACK INTEGRATIONS", "APPROVAL GATES"],
   },
   {
     n: "04",
     title: "WE RUN",
-    body: "Automation is only worth what it does on its worst day, so we monitor it. Failures alert instead of silently dropping work, edge cases come back as fixes, and monthly tuning keeps the system compounding as your process changes.",
-    chips: ["24/7 MONITORING", "FAILURE ALERTS", "MONTHLY TUNING"],
+    body: "A production system has to work on its worst day. We monitor failures, surface exceptions, and tune the workflow as your process, team and tools change.",
+    chips: ["FAILURE ALERTS", "AUDIT LOGS", "OUTCOME REPORTING"],
   },
 ];
 
