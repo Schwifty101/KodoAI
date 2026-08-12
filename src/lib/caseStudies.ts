@@ -64,7 +64,7 @@ export type CaseStudy = {
   };
 };
 
-const CTA_BODY =
+export const CTA_BODY =
   "We scope everything in detail before payment is taken. You work directly with a senior engineer, not a project manager relaying messages to an offshore team.";
 
 export const caseStudies: CaseStudy[] = [
