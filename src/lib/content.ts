@@ -94,40 +94,40 @@ export const process: ProcessPhase[] = [
 
 // -- 05 Services ---------------------------------------------------------------
 
-export const servicesEyebrow = "WHAT WE CAN HELP WITH";
+export const servicesEyebrow = "// WHAT WE BUILD";
 
 export const services: Service[] = [
   {
     title: "WORKFLOW AUTOMATION",
-    desc: "The multi-step process that eats your week, running end to end without a human relay",
+    desc: "Multi-step processes that move from trigger to completion without staff relaying data between systems",
   },
   {
     title: "INTERNAL TOOLS",
-    desc: "The dashboard, portal, or admin panel your team keeps faking in a spreadsheet",
+    desc: "Dashboards, portals and admin systems designed around the way your team actually works",
   },
   {
     title: "DOCUMENT & DATA AGENTS",
-    desc: "Invoices, contracts, forms, and PDFs read, checked, and filed into your systems",
+    desc: "Systems that read, structure, check and route information from forms, contracts, invoices and PDFs",
   },
   {
     title: "VOICE & INTAKE AGENTS",
-    desc: "Calls, forms, and after-hours enquiries answered, qualified, and booked 24/7",
+    desc: "Phone and chat experiences that capture context, qualify inquiries and hand off with a complete record",
   },
   {
     title: "SALES & RESEARCH AGENTS",
-    desc: "Prospects researched, briefs written, and follow-up drafted before the call",
+    desc: "Prospect research, account briefs and follow-up preparation connected to your sales process",
   },
   {
     title: "AD-OPS & GROWTH AGENTS",
-    desc: "Creative generated, tested, and optimized across Meta, Google, and TikTok",
+    desc: "Monitoring, analysis and human-approved execution across paid media workflows",
   },
   {
     title: "SYSTEM INTEGRATIONS",
-    desc: "The tools that do not talk to each other, wired together and kept in sync",
+    desc: "Reliable connections across CRMs, databases, calendars, payment tools and communication platforms",
   },
   {
     title: "MONITORING & REPORTING",
-    desc: "Numbers pulled, checked, and delivered on schedule, with alerts when they move",
+    desc: "Operational dashboards, scheduled reporting, failure alerts and an audit trail of what the system did",
   },
 ];
 
