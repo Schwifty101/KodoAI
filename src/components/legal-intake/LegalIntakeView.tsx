@@ -1,4 +1,3 @@
-// src/components/legal-intake/LegalIntakeView.tsx
 "use client";
 
 import { useRef } from "react";

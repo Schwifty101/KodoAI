@@ -10,7 +10,7 @@ import LogoMark from "@/components/ui/LogoMark";
 import MobileNav from "@/components/layout/MobileNav";
 
 /**
- * Fixed nav (IMPLEMENTATION.md §3.4). Below md the desktop nav + CTA give way to
+ * Fixed nav (IMPLEMENTATION.md §3.4). Below xl the desktop nav + CTA give way to
  * a hamburger (<MobileNav>) that opens a full-screen, footer-styled menu.
  *
  * Items (`.header-item`) drop in with a stagger once the preloader lifts, in the

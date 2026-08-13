@@ -8,7 +8,7 @@ import BookCallButton from "@/components/ui/BookCallButton";
 import LogoMark from "@/components/ui/LogoMark";
 
 /**
- * Mobile navigation (md:hidden). A hamburger in the header opens a full-screen,
+ * Mobile navigation (xl:hidden). A hamburger in the header opens a full-screen,
  * footer-styled menu: giant Barlow Condensed links, studio contact, socials and
  * the booking CTA. Opening stops Lenis + locks scroll; an anchor link restarts
  * it and smooth-scrolls to its section, a route link (e.g. "/") just navigates.
