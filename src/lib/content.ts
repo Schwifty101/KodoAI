@@ -47,7 +47,7 @@ export const socials: Social[] = [
 export const hero = {
   eyebrow: "// CUSTOM AI AUTOMATION AND ORCHESTRATION",
   headline: "BUILD THE SYSTEM YOUR TEAM KEEPS RUNNING BY HAND.",
-  sub: "KodoAI designs custom AI agents and internal software for processes that lose time, revenue or control between tools. We connect the stack you already use, automate the repeatable work, and keep human approval wherever judgement or risk demands it.",
+  sub: "Custom AI agents and internal software for any business: operations, sales, support, finance, marketing.",
 };
 
 // -- 02 Quotation --------------------------------------------------------------
