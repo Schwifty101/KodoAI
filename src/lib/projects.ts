@@ -21,6 +21,18 @@ export const projectsHeading = "OUR HIGHLIGHTS";
 export const projects: Project[] = [
   {
     n: "01",
+    slug: "legal-ops",
+    title: "Legal Operations Platform",
+    description:
+      "An operations platform for a law firm that automates the paperwork around every client. A guest fills one intake form, pays, and the system auto-creates their account, files the case, and issues a reference number with no staff touching it. Consultations gate behind payment then auto-book, and a row-level security layer keeps clients, attorneys, and staff to exactly what they should see.",
+    stack: ["NEST.JS", "SUPABASE", "POSTGRES", "LEMON SQUEEZY", "CAL.COM", "NEXT.JS"],
+    // TODO: client-supplied poster + demo clip pending; using branded placeholder for now.
+    image: "/projects/arco.jpg",
+    video: "",
+    caseStudy: "law-firm-operations-automation",
+  },
+  {
+    n: "02",
     slug: "ads-agent",
     title: "Google Ads Agent",
     description:
@@ -31,7 +43,7 @@ export const projects: Project[] = [
     caseStudy: "ai-google-ads-automation",
   },
   {
-    n: "02",
+    n: "03",
     slug: "pre-call-brief",
     title: "Pre-Call Brief Generator",
     description:
@@ -43,7 +55,7 @@ export const projects: Project[] = [
     caseStudy: "automated-pre-call-brief-generator",
   },
   {
-    n: "03",
+    n: "04",
     slug: "call-agent",
     title: "AI Voice Receptionist",
     description:
@@ -52,18 +64,6 @@ export const projects: Project[] = [
     image: "/projects/call_agent.jpg",
     video: "https://res.cloudinary.com/df4tjjqmc/video/upload/v1784058624/call_agent_ef3eaa.mp4",
     caseStudy: "ai-voice-receptionist",
-  },
-  {
-    n: "04",
-    slug: "legal-ops",
-    title: "Legal Operations Platform",
-    description:
-      "An operations platform for a law firm that automates the paperwork around every client. A guest fills one intake form, pays, and the system auto-creates their account, files the case, and issues a reference number with no staff touching it. Consultations gate behind payment then auto-book, and a row-level security layer keeps clients, attorneys, and staff to exactly what they should see.",
-    stack: ["NEST.JS", "SUPABASE", "POSTGRES", "LEMON SQUEEZY", "CAL.COM", "NEXT.JS"],
-    // TODO: client-supplied poster + demo clip pending; using branded placeholder for now.
-    image: "/projects/arco.jpg",
-    video: "",
-    caseStudy: "law-firm-operations-automation",
   },
   {
     n: "05",
