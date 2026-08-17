@@ -5,10 +5,16 @@ import { useLenis } from "lenis/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
-import { legalIntakePage } from "@/lib/legalIntake";
+import {
+  legalIntakePage,
+  intakeTestimonialsEyebrow,
+  intakeTestimonialsHeading,
+} from "@/lib/legalIntake";
 import { Eyebrow, Heading } from "@/components/ui/SectionPrimitives";
 import BookCallButton from "@/components/ui/BookCallButton";
 import Button from "@/components/ui/Button";
+import IntakeFlowDiagram from "@/components/legal-intake/IntakeFlowDiagram";
+import TestimonialStrip from "@/components/legal-intake/TestimonialStrip";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -135,6 +141,17 @@ export default function LegalIntakeView() {
         </div>
       </section>
 
+      {/* ═══════════════  AGENT PERIMETER (flow diagram)  ═══════════════ */}
+      <section id="agent-perimeter" className="li-section border-b border-border py-24 md:py-32">
+        <div className="shell">
+          <Eyebrow className="li-reveal mb-6">{p.flow.eyebrow}</Eyebrow>
+          <Heading h={p.flow.heading} className={SECTION_H} />
+          <p className="li-reveal mt-8 max-w-3xl text-base leading-relaxed text-ink-2">{p.flow.intro}</p>
+
+          <IntakeFlowDiagram />
+        </div>
+      </section>
+
       {/* ═══════════════  FIT  ═══════════════ */}
       <section className="li-section border-b border-border py-24 md:py-32">
         <div className="shell">
@@ -156,6 +173,20 @@ export default function LegalIntakeView() {
           </div>
 
           <p className="li-reveal mt-10 max-w-2xl text-sm text-ink-3">{p.fit.notRightFit}</p>
+        </div>
+      </section>
+
+      {/* ═══════════════  TESTIMONIALS  ═══════════════ */}
+      <section className="li-section overflow-hidden border-b border-border py-24 md:py-32">
+        <div className="shell">
+          <Eyebrow className="li-reveal mb-6">{intakeTestimonialsEyebrow}</Eyebrow>
+          <Heading h={intakeTestimonialsHeading} className={SECTION_H} />
+        </div>
+
+        {/* Full-bleed on purpose: the strip should run off both edges, so it sits
+            outside `.shell` rather than inside its max-width. */}
+        <div className="mt-14 md:mt-16">
+          <TestimonialStrip />
         </div>
       </section>
 

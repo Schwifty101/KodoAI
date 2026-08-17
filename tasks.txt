@@ -1,3 +1,5 @@
-the header items are in wrong order ; about process work services
+1. remove the sections that are betweeen the faq and services section
 
-add two more projects previous_projects\arco.md previous_projects\trading.md, these projects are more of a full stack web applciation read their detials and extract content related to automation and create case studies for them like for current projects, shape case studies that will focus more towards the automation part of these projects , also name then and write description like those as well, i will provide pictures and videos later 
+2. create a clean professional flow diagram explaining the flow from C:\Users\abdul\Desktop\kodoAI_portoflio\architecture_diagram.txt in legal-intake page
+
+3. add testimonials in the legal-intake page above the last cta section,  testimonials will be displayed in a infinite running strip courousel style, first write 5 testimonials that will seem original and not AI written and with them write names that also not look like AI generated add actual US native names that are not obvious or fake seem

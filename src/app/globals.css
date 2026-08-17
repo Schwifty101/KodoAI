@@ -355,6 +355,30 @@ html {
   }
 }
 
+/* Testimonial marquee (legal-intake/TestimonialStrip.tsx). The track renders the
+   list twice, so translating it by exactly -50% returns to an identical frame and
+   the loop is seamless. Cards space themselves with margins, not a track `gap`:
+   a gap makes the seam land half a gap short and the loop jumps. The mask is an
+   alpha mask (edge fade), not a colour, so it is intentionally not a token. */
+.marquee-wrap {
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent, #000 7%, #000 93%, transparent);
+}
+.marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 55s linear infinite;
+  will-change: transform;
+}
+.marquee-wrap:hover .marquee,
+.marquee-wrap:focus-within .marquee {
+  animation-play-state: paused;
+}
+@keyframes marquee-scroll {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(-50%, 0, 0); }
+}
+
 /* ---------------------------------------------------------------------------
    Reduced motion — every animation degrades to static (rule + §11).
 --------------------------------------------------------------------------- */
@@ -363,6 +387,10 @@ html {
   .spin-slow { animation: none; }
   .accent-bloom { animation: none; } /* bloom stays, it just stops breathing */
   .logo-beat { animation: none; opacity: 1; } /* mark rests lit, never mid-beat */
+  /* The strip stops moving and becomes a plain horizontal scroller, so every
+     quote stays reachable instead of being clipped at the track's edge. */
+  .marquee { animation: none; }
+  .marquee-wrap { overflow-x: auto; }
   *,
   *::before,
   *::after {

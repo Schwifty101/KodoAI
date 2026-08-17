@@ -1,0 +1,57 @@
+Building on the seven-handoff architecture and what the competitive research surfaced (CaseGen's demand letters, Precision AI's medical-record analysis, ProPlaintiff's "AI paralegal"), here's the fuller map. I'll group by where each agent sits relative to your core system.
+
+Upstream of intake (before a lead even reaches your governed pipeline)
+
+Missed-call/after-hours recovery agent – catches calls that hit voicemail and triggers immediate callback or SMS. Natural bolt-on to your voice/SMS agents, and it's the single highest-ROI add given the speed-to-lead data from the research.
+Ad/campaign chatbot agent – lives on landing pages tied to specific PPC/LSA campaigns, feeding straight into your unified inquiry record with campaign attribution already attached.
+Bilingual/translation intake agent – handles Spanish-language (or other) intake in firms with multilingual demand, a strong-fit signal already in your ICP doc.
+
+Inside your core pipeline (extensions of what you already do)
+
+Document/evidence collection agent – chases police reports, insurance declarations, photos and witness details that are marked "missing" in your qualification layer. This is a direct extension of your qualify/orchestrate handoffs.
+Medical records intake and chronology agent – requests, tracks and summarises treatment records into a timeline for attorney review. This is what Precision AI's "Case Lens" and CaseGen's medical-chronology feature do; it sits naturally after conflict clearance and before case acceptance.
+Consultation scheduling agent – books, reminds and reschedules consults once the human decision step clears someone through. You already reference this in "convert and hand off"; it can be sold as a standalone agent too.
+
+Downstream, post-signing (new revenue territory, not currently in your offer)
+
+Demand letter drafting agent – assembles a first-draft demand package from the medical chronology and liability facts once a matter is signed. High perceived value to firms because it saves associate/paralegal hours.
+Client status-update agent – proactively messages existing clients on case milestones ("your demand letter was sent," "we're waiting on the adjuster"), which is the single biggest driver of client complaints in PI firms and a completely separate sale from intake.
+Deadline/statute-of-limitations tracking agent – flags approaching SOL and procedural deadlines across open matters; sits well as a governance/risk product, consistent with your existing "prepare, never decide" positioning.
+Lien and cost-tracking agent – tracks medical liens, case costs and treatment balances against eventual settlement, useful at the back end of the funnel.
+
+Around the edges (marketing/ops layer, sold to the same buyer)
+
+Reputation/review-request agent – triggers Google/Avvo review requests at case resolution, tied into your attribution layer since you already know the source and outcome.
+Referral-partner management agent – tracks inbound/outbound referral relationships and reciprocity, relevant to firms with meaningful co-counsel or doctor-referral networks (a strong-fit signal in your own ICP doc).
+Marketing attribution/reporting agent – less a new "agent" and more a dashboard layer, but sellable as a standalone add-on since you already own the underlying attribution data from handoff 7.
+
+How I'd frame the upsell logic to yourself
+
+The pattern across all of these: each one plugs into an entity or event you already model in your unified inquiry/matter record (documents, medical facts, deadlines, referral sources, outcomes). That's the actual reason they upsell cleanly, not just because they're "more AI agents" – you already own the data spine each of these needs to function, so building them is materially cheaper for you than for a competitor starting from zero. The demand-letter agent and client status-update agent are probably your strongest next moves commercially, since they extend value after the sale into ongoing case management, which is also where retainer/recurring revenue for you gets easiest to justify.
+
+No, i wanna know the core agents surrounding the inbound/intake
+
+Fair - let me narrow it to just the inbound/intake perimeter, not the whole case lifecycle.
+
+Channel capture agents (the "front door" layer)
+
+Voice agent – answers inbound calls, live or after-hours, captures the initial narrative and routes into your inquiry record
+SMS/text agent – two-way texting for prospects who don't want to call, plus follow-up nudges for incomplete intakes
+Web chat agent – live on the site/landing pages, catches visitors who won't fill a form or call
+Missed-call recovery agent – detects an unanswered or abandoned call and immediately triggers a callback or SMS before the prospect calls a competitor
+
+Qualification-layer agents (turning conversation into structured facts)
+
+Transcription and extraction agent – converts call/chat/voicemail narrative into the structured PI fact set (incident date, injury, liability indicators, representation status) your qualification layer needs
+Missing-information follow-up agent – automatically chases the prospect for whatever's flagged as missing before the record can move to routing
+
+Identity and duplication agents (cleaning the record before it moves further)
+
+Deduplication agent – matches a new inquiry against existing records across channels so the same prospect calling and filling a form doesn't create two inquiries
+Bilingual intake agent – handles non-English intake at the point of first contact rather than routing to a human translator
+
+Recovery/follow-up agents (keeping suitable prospects from going cold before conversion)
+
+Nurture/re-engagement agent – follows up on inquiries that stalled (didn't answer a callback, didn't complete a form) on a scheduled cadence until they either convert or are marked lost
+
+That's the actual perimeter around inbound/intake specifically. Everything past this point (conflict prep, human decision, conversion/handoff) is your core system rather than an "agent" bolt-on, and everything past that (documents, medical records, demand letters, client updates) is the downstream territory I described last time, which is a separate upsell conversation once a firm's already bought the intake layer.

@@ -13,6 +13,9 @@ import { CTA_BODY } from "@/lib/caseStudies";
 export type LegalIntakeCapability = { num: string; title: string; description: string };
 export type LegalIntakeRow = { stage: string; whatHappens: string; controlPoint: string };
 export type LegalIntakeIndustry = { title: string; description: string };
+export type IntakeFlowNode = { title: string; detail: string };
+export type IntakeFlowStage = { num: string; title: string; caption: string; nodes: IntakeFlowNode[] };
+export type IntakeTestimonial = { quote: string; name: string; role: string; location: string };
 
 export const legalIntakeTeaser = {
   eyebrow: "// LEGAL OPERATIONS",
@@ -72,6 +75,73 @@ export const legalIntakePage = {
       { stage: "Engagement", whatHappens: "Approved actions create the matter, issue documents, take payment or book time", controlPoint: "Recorded approval before execution" },
     ] as LegalIntakeRow[],
   },
+  // The inbound/intake agent perimeter, drawn by IntakeFlowDiagram.tsx. Three
+  // agent stages converge on one record, then the flow crosses into the firm's
+  // own core system. Distilled from architecture_diagram.txt (the "core agents
+  // surrounding the inbound/intake" pass, not the full case lifecycle).
+  flow: {
+    eyebrow: "// THE AGENT PERIMETER",
+    heading: {
+      lead: ["THREE STAGES."],
+      tail: "ONE INQUIRY RECORD.",
+      tailAccent: false,
+    } as CSHeading,
+    intro:
+      "Everything before the firm's own core system runs as a perimeter of narrow agents, each doing one job on the way to a single clean record. Nothing here decides whether a matter is accepted.",
+    caption: "Inbound intake perimeter: capture, qualification and identity agents feeding one inquiry record, with stalled inquiries returning to the capture stage before the record crosses into the firm's core system.",
+    source: {
+      label: "// INBOUND DEMAND",
+      items: ["Phone calls", "Web forms", "Site chat", "Paid campaigns", "Referrals"],
+    },
+    stages: [
+      {
+        num: "01",
+        title: "Channel Capture",
+        caption: "// THE FRONT DOOR",
+        nodes: [
+          { title: "Voice agent", detail: "Answers inbound calls live or after hours, captures the initial narrative and opens the record." },
+          { title: "SMS agent", detail: "Two-way texting for prospects who will not call, plus nudges on intakes left half finished." },
+          { title: "Web chat agent", detail: "Sits on the site and campaign landing pages, catching visitors who will not call or fill a form." },
+          { title: "Missed-call recovery", detail: "Detects an unanswered or abandoned call and fires a callback or text before the prospect dials a competitor." },
+        ],
+      },
+      {
+        num: "02",
+        title: "Qualification Layer",
+        caption: "// CONVERSATION INTO STRUCTURED FACTS",
+        nodes: [
+          { title: "Transcription and extraction", detail: "Turns call, chat and voicemail narrative into the structured fact set the firm's criteria are written against: incident date, injury, liability indicators, representation status." },
+          { title: "Missing-information follow-up", detail: "Chases the prospect for whatever the record still lacks, so nothing moves to routing on a half-filled file." },
+        ],
+      },
+      {
+        num: "03",
+        title: "Identity and Deduplication",
+        caption: "// CLEANING THE RECORD BEFORE IT MOVES",
+        nodes: [
+          { title: "Deduplication agent", detail: "Matches each new inquiry against existing records across every channel, so one prospect who calls and then submits a form stays one inquiry." },
+          { title: "Bilingual intake agent", detail: "Handles non-English intake at the point of first contact instead of parking the prospect until a translator is free." },
+        ],
+      },
+    ] as IntakeFlowStage[],
+    loop: {
+      label: "RE-ENGAGEMENT LOOP",
+      detail:
+        "Nurture and re-engagement agent: inquiries that stall (no answer on the callback, a form abandoned halfway) re-enter capture on a scheduled cadence until they convert or are marked lost.",
+    },
+    record: {
+      eyebrow: "// CONVERGENCE",
+      title: "One Unified Inquiry Record",
+      detail:
+        "Source, consent, safe-contact preference, structured facts and the full channel history in one place, with campaign attribution attached from the first touch.",
+    },
+    core: {
+      eyebrow: "// PAST THE PERIMETER: THE FIRM'S CORE SYSTEM",
+      steps: ["Conflict preparation", "Human decision", "Conversion and handoff"],
+      detail:
+        "From here the firm's own rules and approvals govern every step. The agents prepare the matter; they never decide it.",
+    },
+  },
   fit: {
     eyebrow: "// DESIGNED FOR FIRMS WHERE DELAY HAS A REAL COST",
     intro: "The strongest fit is a high-volume boutique firm with valuable inbound inquiries, several intake channels, multiple practice areas or jurisdictions, and rules that do not fit neatly inside a standard form.",
@@ -88,3 +158,55 @@ export const legalIntakePage = {
     label: "AUDIT OUR INTAKE FLOW",
   },
 };
+
+// -----------------------------------------------------------------------------
+// TESTIMONIALS (TestimonialStrip.tsx, /legal-intake, above the closing CTA)
+// PLACEHOLDER COPY: attributions are role + city only, no firm names, so nothing
+// here claims to be a named entity. Replace with real, approved quotes before
+// this page is treated as social proof.
+// -----------------------------------------------------------------------------
+
+export const intakeTestimonialsEyebrow = "// FROM THE PEOPLE WORKING THE QUEUE";
+export const intakeTestimonialsHeading = {
+  lead: ["WHAT THE INTAKE"],
+  tail: "TEAMS SAY.",
+  tailAccent: false,
+} as CSHeading;
+
+export const intakeTestimonials: IntakeTestimonial[] = [
+  {
+    quote:
+      "We were losing people to voicemail after five and mostly never knew it. Now the callback goes out before the missed call even shows up in my log. The part I actually care about is that nothing gets accepted without someone here looking at it first.",
+    name: "Dana Kowalczyk",
+    role: "Intake Director, plaintiff PI practice",
+    location: "Toledo, OH",
+  },
+  {
+    quote:
+      "I was skeptical about letting software anywhere near conflicts. What sold me was watching it flag a possible match, show me where it pulled that from, and then stop. It does the tedious half and leaves the call to me.",
+    name: "Ray Bettencourt",
+    role: "Managing Partner, family law practice",
+    location: "Fall River, MA",
+  },
+  {
+    quote:
+      "About half our calls come in Spanish and we used to just hold those until someone was free, which sometimes meant the next morning. The intake happens in Spanish now at the point of contact and the record lands in English. That alone was worth it.",
+    name: "Marisol Delgado",
+    role: "Intake Supervisor, PI practice",
+    location: "San Antonio, TX",
+  },
+  {
+    quote:
+      "Same guy calls the main line, fills out the web form that night, then texts us two days later. That used to be three files and two of us calling him. Duplicates are down to a handful a month and I stopped hearing about it in our Monday meeting.",
+    name: "Tom Ruzicka",
+    role: "Operations Manager, three-office PI practice",
+    location: "Phoenix, AZ",
+  },
+  {
+    quote:
+      "It is not magic and Soban never pitched it that way. We spent the better part of two weeks mapping how we actually route things, including the exceptions nobody had written down, before anything got built. That is why it fits.",
+    name: "Kristin Vaughn",
+    role: "Firm Administrator, plaintiff employment practice",
+    location: "Sacramento, CA",
+  },
+];
