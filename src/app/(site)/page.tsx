@@ -1,7 +1,7 @@
 import Hero from "@/components/sections/Hero";
 import Quotation from "@/components/sections/Quotation";
 import ProcessTimeline from "@/components/sections/ProcessTimeline";
-import LegalIntakeTeaser from "@/components/sections/LegalIntakeTeaser";
+import SolutionsTeaser from "@/components/sections/SolutionsTeaser";
 import Projects from "@/components/sections/Projects";
 import Services from "@/components/sections/Services";
 import FAQ from "@/components/sections/FAQ";
@@ -15,7 +15,7 @@ export default function Home() {
       <div className="depth-band">
         <Quotation />
         <ProcessTimeline />
-        <LegalIntakeTeaser />
+        <SolutionsTeaser />
         <Projects />
         <Services />
         {/* Governance + EngagementModel are intentionally out of the scroll for

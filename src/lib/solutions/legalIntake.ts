@@ -1,40 +1,36 @@
 // -----------------------------------------------------------------------------
-// LEGAL INTAKE
-// Homepage teaser (LegalIntakeTeaser.tsx) + the full /legal-intake subpage
-// (LegalIntakeView.tsx). Distilled from KodoAI-Landing-Page-Copy.md's
-// "Featured solution: legal intake" section. Lives outside content.ts for the
-// same reason projects.ts/caseStudies.ts do: a large, self-contained block,
-// not sitewide chrome copy.
+// LEGAL INTAKE (/legal-intake)
+// Distilled from KodoAI-Landing-Page-Copy.md's "Featured solution: legal intake"
+// section; the flow block comes from architecture_diagram.txt (the "core agents
+// surrounding the inbound/intake" pass, not the full case lifecycle).
+// Shape and rendering: src/lib/solutions/types.ts.
 // -----------------------------------------------------------------------------
 
-import type { CSHeading } from "@/lib/caseStudies";
 import { CTA_BODY } from "@/lib/caseStudies";
+import type { Solution } from "@/lib/solutions/types";
 
-export type LegalIntakeCapability = { num: string; title: string; description: string };
-export type LegalIntakeRow = { stage: string; whatHappens: string; controlPoint: string };
-export type LegalIntakeIndustry = { title: string; description: string };
-export type IntakeFlowNode = { title: string; detail: string };
-export type IntakeFlowStage = { num: string; title: string; caption: string; nodes: IntakeFlowNode[] };
-export type IntakeTestimonial = { quote: string; name: string; role: string; location: string };
+export const legalIntake: Solution = {
+  slug: "legal-intake",
+  navLabel: "LEGAL INTAKE",
+  meta: {
+    title: "Governed Legal Intake: kodoAI",
+    description:
+      "The integration and decision-governance layer between your AI receptionist, practice-management system, conflict records and engagement workflow.",
+  },
 
-export const legalIntakeTeaser = {
-  eyebrow: "// LEGAL OPERATIONS",
-  heading: "HIGH-VOLUME LEAD ROUTING AND GOVERNED INTAKE",
-  body: [
-    "When a valuable inquiry arrives, speed matters. So do conflict procedures, qualification standards and the firm's authority to accept the matter. Most intake stacks solve one part of that journey and leave staff to reconcile the rest by hand.",
-    "KodoAI builds the integration and decision-governance layer between the firm's AI receptionist, practice-management system, conflict records and engagement workflow. For standard inquiries, the system can prepare a matter for conflict-ready review in as little as 10 minutes, subject to the firm's own conflict procedures and attorney approval.",
-  ],
-  capabilities: [
-    "MINIMAL PRE-CONFLICT CAPTURE",
-    "CONFLICT-READY PREPARATION",
-    "DETERMINISTIC ROUTING",
-    "APPROVAL-GATED ENGAGEMENT",
-  ],
-  primaryCta: "AUDIT OUR INTAKE FLOW",
-  secondaryCta: "SEE HOW THE LAYER WORKS",
-};
+  teaser: {
+    eyebrow: "// LEGAL OPERATIONS",
+    title: "GOVERNED LEGAL INTAKE",
+    body: "Speed matters when a valuable inquiry lands, and so do conflict procedures and the firm's authority to take the matter. We build the layer between the AI receptionist, practice-management system, conflict records and engagement workflow, so agents prepare the matter and the firm still decides it.",
+    capabilities: [
+      "MINIMAL PRE-CONFLICT CAPTURE",
+      "CONFLICT-READY PREPARATION",
+      "DETERMINISTIC ROUTING",
+      "APPROVAL-GATED ENGAGEMENT",
+    ],
+    cta: "SEE HOW THE LAYER WORKS",
+  },
 
-export const legalIntakePage = {
   hero: {
     eyebrow: "// LEGAL OPERATIONS",
     title: "HIGH-VOLUME LEAD ROUTING",
@@ -44,12 +40,13 @@ export const legalIntakePage = {
     primaryCta: "AUDIT OUR INTAKE FLOW",
     secondaryCta: "SEE THE ORCHESTRATION LAYER",
   },
+
   capabilitiesEyebrow: "// WHAT THE SYSTEM CAN COORDINATE",
   capabilitiesHeading: {
     lead: ["SIX CAPABILITIES."],
     tail: "ONE GOVERNED LAYER.",
     tailAccent: false,
-  } as CSHeading,
+  },
   capabilities: [
     { num: "01", title: "Minimal Pre-Conflict Capture", description: "Bring approved call, form, chat and referral inputs into one prospect record. Capture safe-contact preferences and only the details needed for the firm's preliminary conflict procedure." },
     { num: "02", title: "Conflict-Ready Preparation", description: "Extract and normalise names, adverse parties, aliases and related entities. Search the sources the firm authorises and send uncertain results to the designated reviewer." },
@@ -57,14 +54,15 @@ export const legalIntakePage = {
     { num: "04", title: "Deterministic Routing", description: "Apply the firm's approved rules for case type, venue, limitation risk, language and attorney capacity. AI interprets the inquiry; the routing decision follows controlled logic." },
     { num: "05", title: "Approval-Gated Engagement", description: "Move qualified matters to the right reviewer. Trigger booking, e-signature, payment or follow-up only after the required approval state is recorded." },
     { num: "06", title: "Audit and Exception Handling", description: "Log the inputs, rules, possible matches and overrides. If a source is unavailable or a field is missing, the workflow stops safely and alerts the right person." },
-  ] as LegalIntakeCapability[],
+  ],
+
   orchestration: {
     eyebrow: "// THE ORCHESTRATION LAYER",
     heading: {
       lead: ["EVERY STAGE."],
       tail: "ONE CONTROL POINT.",
       tailAccent: false,
-    } as CSHeading,
+    },
     columns: { stage: "Stage", whatHappens: "What happens", controlPoint: "Control point" },
     rows: [
       { stage: "Minimal capture", whatHappens: "Approved channels create or update one prospect record", controlPoint: "Safe contact, consent, source and duplicate checks" },
@@ -73,19 +71,18 @@ export const legalIntakePage = {
       { stage: "Routing", whatHappens: "Firm rules select a review queue, attorney or referral path", controlPoint: "Deterministic logic and exception queue" },
       { stage: "Decision", whatHappens: "The designated person reviews fit and conflict information", controlPoint: "Human or attorney approval" },
       { stage: "Engagement", whatHappens: "Approved actions create the matter, issue documents, take payment or book time", controlPoint: "Recorded approval before execution" },
-    ] as LegalIntakeRow[],
+    ],
   },
-  // The inbound/intake agent perimeter, drawn by IntakeFlowDiagram.tsx. Three
-  // agent stages converge on one record, then the flow crosses into the firm's
-  // own core system. Distilled from architecture_diagram.txt (the "core agents
-  // surrounding the inbound/intake" pass, not the full case lifecycle).
+
+  // Three agent stages converge on one record, then the flow crosses into the
+  // firm's own core system.
   flow: {
     eyebrow: "// THE AGENT PERIMETER",
     heading: {
       lead: ["THREE STAGES."],
       tail: "ONE INQUIRY RECORD.",
       tailAccent: false,
-    } as CSHeading,
+    },
     intro:
       "Everything before the firm's own core system runs as a perimeter of narrow agents, each doing one job on the way to a single clean record. Nothing here decides whether a matter is accepted.",
     caption: "Inbound intake perimeter: capture, qualification and identity agents feeding one inquiry record, with stalled inquiries returning to the capture stage before the record crosses into the firm's core system.",
@@ -123,7 +120,7 @@ export const legalIntakePage = {
           { title: "Bilingual intake agent", detail: "Handles non-English intake at the point of first contact instead of parking the prospect until a translator is free." },
         ],
       },
-    ] as IntakeFlowStage[],
+    ],
     loop: {
       label: "RE-ENGAGEMENT LOOP",
       detail:
@@ -142,6 +139,7 @@ export const legalIntakePage = {
         "From here the firm's own rules and approvals govern every step. The agents prepare the matter; they never decide it.",
     },
   },
+
   fit: {
     eyebrow: "// DESIGNED FOR FIRMS WHERE DELAY HAS A REAL COST",
     intro: "The strongest fit is a high-volume boutique firm with valuable inbound inquiries, several intake channels, multiple practice areas or jurisdictions, and rules that do not fit neatly inside a standard form.",
@@ -149,64 +147,62 @@ export const legalIntakePage = {
       { title: "Personal Injury", description: "Preserve PPC and LSA attribution, merge duplicate phone and form inquiries, escalate catastrophic matters, and route co-counsel or referral cases without losing the source or approval history." },
       { title: "Family Law", description: "Capture safe-contact preferences before follow-up. Match former names, spouses, children and related entities. Route possible conflicts, urgent hearings and domestic-violence concerns to the firm's designated reviewers." },
       { title: "Plaintiff Employment", description: "Resolve employer brands, payroll entities, staffing firms and related companies. Extract event dates and evidence gaps, and flag deadline-sensitive matters for attorney review." },
-    ] as LegalIntakeIndustry[],
+    ],
     notRightFit: "Usually not the right fit for a low-volume firm with one clean intake path and a practice-management setup that already handles its exceptions well.",
   },
+
+  // PLACEHOLDER COPY: attributions are role + city only, no firm names, so
+  // nothing here claims to be a named entity. Replace with real, approved quotes
+  // before this page is treated as social proof.
+  testimonials: {
+    eyebrow: "// FROM THE PEOPLE WORKING THE QUEUE",
+    heading: {
+      lead: ["WHAT THE INTAKE"],
+      tail: "TEAMS SAY.",
+      tailAccent: false,
+    },
+    items: [
+      {
+        quote:
+          "After five we were losing people to voicemail, and half the time we never knew it had happened. Now the callback goes out before the missed call shows up in my log. It still will not accept a matter on its own, which was my condition for signing off on any of this.",
+        name: "Dana Kowalczyk",
+        role: "Intake Director, plaintiff PI practice",
+        location: "Toledo, OH",
+      },
+      {
+        quote:
+          "I did not want software anywhere near our conflict checks. Then I watched it flag a possible match, show me the record it pulled that from, and stop there and wait for me.",
+        name: "Ray Bettencourt",
+        role: "Managing Partner, family law practice",
+        location: "Fall River, MA",
+      },
+      {
+        quote:
+          "About half our calls come in Spanish. We used to park those until someone was free, and some nights that meant the next morning. Now the caller gets Spanish on the first call and the record reaches us in English.",
+        name: "Marisol Delgado",
+        role: "Intake Supervisor, PI practice",
+        location: "San Antonio, TX",
+      },
+      {
+        quote:
+          "Same guy calls the main line, fills out the web form that night, then texts us two days later. That used to be three files and two of us calling him back. We are down to a handful of duplicates a month and it stopped coming up in our Monday meeting.",
+        name: "Tom Ruzicka",
+        role: "Operations Manager, three-office PI practice",
+        location: "Phoenix, AZ",
+      },
+      {
+        quote:
+          "We spent the first two weeks mapping how we actually route things, exceptions and all, and half those exceptions had never been written down anywhere. Soban was upfront that no software was going to guess them for us. So we wrote them down, and that is what got built.",
+        name: "Kristin Vaughn",
+        role: "Firm Administrator, plaintiff employment practice",
+        location: "Sacramento, CA",
+      },
+    ],
+  },
+
   cta: {
-    heading: { lead: ["WANT THE INTAKE"], tail: "LAYER LIVE?", tailAccent: true } as CSHeading,
+    heading: { lead: ["WANT THE INTAKE"], tail: "LAYER LIVE?", tailAccent: true },
     body: CTA_BODY,
     label: "AUDIT OUR INTAKE FLOW",
   },
 };
-
-// -----------------------------------------------------------------------------
-// TESTIMONIALS (TestimonialStrip.tsx, /legal-intake, above the closing CTA)
-// PLACEHOLDER COPY: attributions are role + city only, no firm names, so nothing
-// here claims to be a named entity. Replace with real, approved quotes before
-// this page is treated as social proof.
-// -----------------------------------------------------------------------------
-
-export const intakeTestimonialsEyebrow = "// FROM THE PEOPLE WORKING THE QUEUE";
-export const intakeTestimonialsHeading = {
-  lead: ["WHAT THE INTAKE"],
-  tail: "TEAMS SAY.",
-  tailAccent: false,
-} as CSHeading;
-
-export const intakeTestimonials: IntakeTestimonial[] = [
-  {
-    quote:
-      "We were losing people to voicemail after five and mostly never knew it. Now the callback goes out before the missed call even shows up in my log. The part I actually care about is that nothing gets accepted without someone here looking at it first.",
-    name: "Dana Kowalczyk",
-    role: "Intake Director, plaintiff PI practice",
-    location: "Toledo, OH",
-  },
-  {
-    quote:
-      "I was skeptical about letting software anywhere near conflicts. What sold me was watching it flag a possible match, show me where it pulled that from, and then stop. It does the tedious half and leaves the call to me.",
-    name: "Ray Bettencourt",
-    role: "Managing Partner, family law practice",
-    location: "Fall River, MA",
-  },
-  {
-    quote:
-      "About half our calls come in Spanish and we used to just hold those until someone was free, which sometimes meant the next morning. The intake happens in Spanish now at the point of contact and the record lands in English. That alone was worth it.",
-    name: "Marisol Delgado",
-    role: "Intake Supervisor, PI practice",
-    location: "San Antonio, TX",
-  },
-  {
-    quote:
-      "Same guy calls the main line, fills out the web form that night, then texts us two days later. That used to be three files and two of us calling him. Duplicates are down to a handful a month and I stopped hearing about it in our Monday meeting.",
-    name: "Tom Ruzicka",
-    role: "Operations Manager, three-office PI practice",
-    location: "Phoenix, AZ",
-  },
-  {
-    quote:
-      "It is not magic and Soban never pitched it that way. We spent the better part of two weeks mapping how we actually route things, including the exceptions nobody had written down, before anything got built. That is why it fits.",
-    name: "Kristin Vaughn",
-    role: "Firm Administrator, plaintiff employment practice",
-    location: "Sacramento, CA",
-  },
-];

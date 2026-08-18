@@ -5,16 +5,12 @@ import { useLenis } from "lenis/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
-import {
-  legalIntakePage,
-  intakeTestimonialsEyebrow,
-  intakeTestimonialsHeading,
-} from "@/lib/legalIntake";
+import type { Solution } from "@/lib/solutions/types";
 import { Eyebrow, Heading } from "@/components/ui/SectionPrimitives";
 import BookCallButton from "@/components/ui/BookCallButton";
 import Button from "@/components/ui/Button";
-import IntakeFlowDiagram from "@/components/legal-intake/IntakeFlowDiagram";
-import TestimonialStrip from "@/components/legal-intake/TestimonialStrip";
+import FlowDiagram from "@/components/solutions/FlowDiagram";
+import TestimonialStrip from "@/components/solutions/TestimonialStrip";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -22,15 +18,19 @@ const SECTION_H =
   "li-reveal font-display text-[clamp(44px,7.5vw,104px)] font-extrabold uppercase leading-[0.88] tracking-tight text-ink";
 
 /**
- * /legal-intake — long-form capability page, same visual pattern as
- * CaseStudyView.tsx (hero → sections → CTA), built on the same
- * Eyebrow/Heading primitives. Reveal: every `.li-reveal` inside a
- * `.li-section` fades up on enter, staggered. Reduced motion: static.
+ * The long-form page behind every solution (/legal-intake, /med-spa), driven
+ * entirely by its data file (src/lib/solutions/). Same visual pattern as
+ * CaseStudyView.tsx (hero → sections → CTA), built on the same Eyebrow/Heading
+ * primitives. Reveal: every `.li-reveal` inside a `.li-section` fades up on
+ * enter, staggered. Reduced motion: static.
+ *
+ * `key={solution.slug}` on the caller is unnecessary; each route renders its own
+ * instance and the scroll reset below runs on mount.
  */
-export default function LegalIntakeView() {
+export default function SolutionView({ solution }: { solution: Solution }) {
   const root = useRef<HTMLElement>(null);
   const lenis = useLenis();
-  const p = legalIntakePage;
+  const p = solution;
 
   useGSAP(
     () => {
@@ -148,7 +148,7 @@ export default function LegalIntakeView() {
           <Heading h={p.flow.heading} className={SECTION_H} />
           <p className="li-reveal mt-8 max-w-3xl text-base leading-relaxed text-ink-2">{p.flow.intro}</p>
 
-          <IntakeFlowDiagram />
+          <FlowDiagram flow={p.flow} />
         </div>
       </section>
 
@@ -179,14 +179,14 @@ export default function LegalIntakeView() {
       {/* ═══════════════  TESTIMONIALS  ═══════════════ */}
       <section className="li-section overflow-hidden border-b border-border py-24 md:py-32">
         <div className="shell">
-          <Eyebrow className="li-reveal mb-6">{intakeTestimonialsEyebrow}</Eyebrow>
-          <Heading h={intakeTestimonialsHeading} className={SECTION_H} />
+          <Eyebrow className="li-reveal mb-6">{p.testimonials.eyebrow}</Eyebrow>
+          <Heading h={p.testimonials.heading} className={SECTION_H} />
         </div>
 
         {/* Full-bleed on purpose: the strip should run off both edges, so it sits
             outside `.shell` rather than inside its max-width. */}
         <div className="mt-14 md:mt-16">
-          <TestimonialStrip />
+          <TestimonialStrip items={p.testimonials.items} />
         </div>
       </section>
 

@@ -3,27 +3,26 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import SolutionView from "@/components/solutions/SolutionView";
 import { solutionNav } from "@/lib/solutions";
-import { legalIntake } from "@/lib/solutions/legalIntake";
+import { medSpa } from "@/lib/solutions/medSpa";
 
 // Same site Header, slim nav: HOME plus the other solution. Logo returns home.
-// Matches the pattern in src/app/case-study/[slug]/page.tsx.
-const NAV = solutionNav(legalIntake.slug);
+const NAV = solutionNav(medSpa.slug);
 
 export const metadata: Metadata = {
-  title: legalIntake.meta.title,
-  description: legalIntake.meta.description,
+  title: medSpa.meta.title,
+  description: medSpa.meta.description,
   openGraph: {
-    title: legalIntake.meta.title,
-    description: legalIntake.meta.description,
+    title: medSpa.meta.title,
+    description: medSpa.meta.description,
     type: "article",
   },
 };
 
-export default function LegalIntakePage() {
+export default function MedSpaPage() {
   return (
     <>
       <Header links={NAV} logoHref="/" />
-      <SolutionView solution={legalIntake} />
+      <SolutionView solution={medSpa} />
       <Footer />
     </>
   );

@@ -355,7 +355,7 @@ html {
   }
 }
 
-/* Testimonial marquee (legal-intake/TestimonialStrip.tsx). The track renders the
+/* Testimonial marquee (solutions/TestimonialStrip.tsx). The track renders the
    list twice, so translating it by exactly -50% returns to an identical frame and
    the loop is seamless. Cards space themselves with margins, not a track `gap`:
    a gap makes the seam land half a gap short and the loop jumps. The mask is an

@@ -1,5 +1,3 @@
-1. remove the sections that are betweeen the faq and services section
+1. rewrite legal-intake page testimonials with new installed skill no ai slop
 
-2. create a clean professional flow diagram explaining the flow from C:\Users\abdul\Desktop\kodoAI_portoflio\architecture_diagram.txt in legal-intake page
-
-3. add testimonials in the legal-intake page above the last cta section,  testimonials will be displayed in a infinite running strip courousel style, first write 5 testimonials that will seem original and not AI written and with them write names that also not look like AI generated add actual US native names that are not obvious or fake seem
+2. add a similar page to legal-intake and it will be named med spa and just like there is a section in home below the process that has overview of the legal-intake page , you need to modify the section now the section will contain two column one for legal intake and one for med spa , lower the description and sturcture them cleanly and meda spa page will be similar to the legal-intake page and have almost same section , right now for the content you can add related content i will change the content later 

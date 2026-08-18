@@ -32,7 +32,7 @@ export const site = {
 export const nav: NavLink[] = [
   { label: "ABOUT", href: "#quotation" },
   { label: "PROCESS", href: "#process" },
-  { label: "LEGAL INTAKE", href: "/legal-intake" },
+  { label: "SOLUTIONS", href: "#solutions" },
   { label: "WORK", href: "#projects" },
   { label: "SERVICES", href: "#services" },
   { label: "FAQS", href: "#faq" },
@@ -266,7 +266,7 @@ export const footer = {
   nav: [
     { label: "ABOUT", href: "#quotation" },
     { label: "PROCESS", href: "#process" },
-    { label: "LEGAL INTAKE", href: "/legal-intake" },
+    { label: "SOLUTIONS", href: "#solutions" },
     { label: "WORK", href: "#projects" },
     { label: "SERVICES", href: "#services" },
     { label: "FAQS", href: "#faq" },

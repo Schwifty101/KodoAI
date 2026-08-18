@@ -1,4 +1,4 @@
-import { intakeTestimonials, type IntakeTestimonial } from "@/lib/legalIntake";
+import type { SolutionTestimonial } from "@/lib/solutions/types";
 
 /**
  * Infinite testimonial strip. The track holds the list twice, so a CSS
@@ -10,14 +10,14 @@ import { intakeTestimonials, type IntakeTestimonial } from "@/lib/legalIntake";
  * once. Hover or keyboard focus inside the strip pauses it; under reduced motion
  * the animation is off and the strip becomes a normal horizontal scroller.
  */
-export default function TestimonialStrip() {
+export default function TestimonialStrip({ items }: { items: SolutionTestimonial[] }) {
   return (
     <div className="marquee-wrap li-reveal" tabIndex={0} role="group" aria-label="Client testimonials">
       <ul className="marquee list-none">
-        {intakeTestimonials.map((t) => (
+        {items.map((t) => (
           <Card key={t.name} t={t} />
         ))}
-        {intakeTestimonials.map((t) => (
+        {items.map((t) => (
           <Card key={`${t.name}-dup`} t={t} duplicate />
         ))}
       </ul>
@@ -25,7 +25,7 @@ export default function TestimonialStrip() {
   );
 }
 
-function Card({ t, duplicate = false }: { t: IntakeTestimonial; duplicate?: boolean }) {
+function Card({ t, duplicate = false }: { t: SolutionTestimonial; duplicate?: boolean }) {
   return (
     <li
       aria-hidden={duplicate || undefined}

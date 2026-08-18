@@ -2,7 +2,7 @@ import type { CSHeading } from "@/lib/caseStudies";
 
 /**
  * Mono `//` label with the accent bar. Shared by CaseStudyView and
- * LegalIntakeView — both are long-form deep-dive pages built on the same
+ * SolutionView — both are long-form deep-dive pages built on the same
  * visual language.
  */
 export function Eyebrow({
