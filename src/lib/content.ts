@@ -26,7 +26,7 @@ export const site = {
   sub: "KodoAI builds custom AI agents, internal software and governed automations that connect your tools, move work forward and keep people in control of high-stakes decisions.",
   email: "soban@kodoai.xyz",
   location: ["Working worldwide."],
-  cta: { label: "SHOW US THE WORKFLOW", href: "#footer" },
+  cta: { label: "GET A WORKFLOW AUDIT", href: "#footer" },
 };
 
 export const nav: NavLink[] = [
@@ -142,7 +142,7 @@ export const governanceHeading = {
   accent: "IT SHOULD NOT QUIETLY OWN THE RISK.",
 };
 export const governanceIntro =
-  "We separate probabilistic tasks from controlled decisions. An AI model can extract names, summarise an inquiry or identify missing information. Deterministic rules decide which action is allowed next. High-impact actions wait for the right person.";
+  "We separate probabilistic tasks from controlled decisions. An AI model can extract names, summarize an inquiry or identify missing information. Deterministic rules decide which action is allowed next. High-impact actions wait for the right person.";
 
 export const governance: GovernancePrinciple[] = [
   {
@@ -215,7 +215,7 @@ export const faq: QA[] = [
   },
   {
     q: "Is this an AI wrapper or custom software?",
-    a: "It is custom software built around the workflow. AI models may handle conversation, extraction or summarisation. The surrounding system handles permissions, integrations, business rules, approvals, logging, retries and monitoring.",
+    a: "It is custom software built around the workflow. AI models may handle conversation, extraction or summarization. The surrounding system handles permissions, integrations, business rules, approvals, logging, retries and monitoring.",
   },
   {
     q: "How is this different from an off-the-shelf tool or Zapier?",
@@ -239,7 +239,7 @@ export const faq: QA[] = [
   },
   {
     q: "Do you work only with law firms?",
-    a: "No. KodoAI builds automation and orchestration systems across industries. Legal intake is a specialised capability within the broader practice, shaped by our experience building legal operations software and approval-gated systems.",
+    a: "No. KodoAI builds automation and orchestration systems across industries. Legal intake is a specialized capability within the broader practice, shaped by our experience building legal operations software and approval-gated systems.",
   },
 ];
 
@@ -249,7 +249,7 @@ export const finalCta = {
   eyebrow: "// READY WHEN YOU ARE",
   lead: "FIND THE WORKFLOW COSTING YOU THE MOST.",
   accent: "THEN DECIDE IF IT'S WORTH FIXING.",
-  ctaLabel: "SHOW US THE WORKFLOW",
+  ctaLabel: "GET A WORKFLOW AUDIT",
 };
 
 // Cal.com booking (element-click popup). The CTA opens this event in a modal.
@@ -277,7 +277,7 @@ export const footer = {
   ] as NavLink[],
   socialsHeading: "SOCIALS",
   ctaEyebrow: "// START A PROJECT",
-  ctaLabel: "SHOW US THE WORKFLOW",
+  ctaLabel: "GET A WORKFLOW AUDIT",
   copyright: "© 2026 KODOAI. ALL RIGHTS RESERVED.",
   tagline: "// KODOAI: CUSTOM AI AUTOMATION AND ORCHESTRATION SYSTEMS",
   backToTop: "BACK TO TOP",

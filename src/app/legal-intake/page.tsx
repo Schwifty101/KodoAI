@@ -12,11 +12,62 @@ const NAV = solutionNav(legalIntake.slug);
 export const metadata: Metadata = {
   title: legalIntake.meta.title,
   description: legalIntake.meta.description,
+  alternates: { canonical: "/legal-intake" },
   openGraph: {
     title: legalIntake.meta.title,
     description: legalIntake.meta.description,
-    type: "article",
+    url: "/legal-intake",
+    type: "website",
+    images: ["/reference/banner.png"],
   },
+};
+
+const SITE_URL = "https://www.kodoai.xyz";
+const PAGE_URL = `${SITE_URL}/legal-intake`;
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": `${PAGE_URL}#service`,
+      name: "Personal Injury Intake Orchestration",
+      serviceType: "Legal intake orchestration, conflict preparation and routing automation",
+      url: PAGE_URL,
+      description:
+        "Custom intake orchestration for plaintiff personal injury firms. One inquiry record across channels, conflict-ready preparation with source evidence, deterministic routing on firm-approved rules, and engagement that fires only after recorded human approval.",
+      provider: { "@type": "Organization", name: "kodoAI", url: SITE_URL, email: "soban@kodoai.xyz" },
+      areaServed: [
+        { "@type": "Country", name: "United States" },
+        { "@type": "Country", name: "Canada" },
+      ],
+      audience: { "@type": "Audience", audienceType: "Plaintiff personal injury law firms" },
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "Intake orchestration capabilities",
+        itemListElement: legalIntake.capabilities.map((c) => ({
+          "@type": "Offer",
+          itemOffered: { "@type": "Service", name: c.title },
+        })),
+      },
+    },
+    {
+      "@type": "FAQPage",
+      "@id": `${PAGE_URL}#faq`,
+      mainEntity: (legalIntake.faq?.items ?? []).map((qa) => ({
+        "@type": "Question",
+        name: qa.q,
+        acceptedAnswer: { "@type": "Answer", text: qa.a },
+      })),
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_URL}/` },
+        { "@type": "ListItem", position: 2, name: "Legal Intake", item: PAGE_URL },
+      ],
+    },
+  ],
 };
 
 export default function LegalIntakePage() {
@@ -25,6 +76,10 @@ export default function LegalIntakePage() {
       <Header links={NAV} logoHref="/" />
       <SolutionView solution={legalIntake} />
       <Footer />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
     </>
   );
 }

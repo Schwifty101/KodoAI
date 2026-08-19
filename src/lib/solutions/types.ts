@@ -9,9 +9,13 @@
 // Copy for these lives here rather than in content.ts for the same reason
 // projects.ts / caseStudies.ts do: large, self-contained blocks, not sitewide
 // chrome copy.
+//
+// A solution may also carry an optional `faq` block, rendered by the shared
+// sections/FAQ.tsx between the testimonials strip and the CTA.
 // -----------------------------------------------------------------------------
 
 import type { CSHeading } from "@/lib/caseStudies";
+import type { QA } from "@/lib/content";
 
 export type SolutionCapability = { num: string; title: string; description: string };
 export type SolutionRow = { stage: string; whatHappens: string; controlPoint: string };
@@ -84,7 +88,20 @@ export type Solution = {
   testimonials: {
     eyebrow: string;
     heading: CSHeading;
+    /** false = render as plain scenario text with no quotation marks. Default true. */
+    quoted?: boolean;
+    /** aria-label for the strip. Default "Client testimonials". */
+    label?: string;
     items: SolutionTestimonial[];
+  };
+
+  /** Optional Q&A section, rendered by sections/FAQ.tsx between the strip and the CTA. */
+  faq?: {
+    eyebrow: string;
+    intro: string;
+    headingTop: string;
+    headingBottom: string;
+    items: QA[];
   };
 
   cta: {

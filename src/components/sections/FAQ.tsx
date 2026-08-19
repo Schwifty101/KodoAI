@@ -5,7 +5,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
-import { faq, faqEyebrow, faqIntro } from "@/lib/content";
+import { faq, faqEyebrow, faqIntro, type QA } from "@/lib/content";
 import Hairline from "@/components/ui/Hairline";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -18,7 +18,23 @@ gsap.registerPlugin(ScrollTrigger);
  * the two never fight (project rule: React/GSAP don't cross streams).
  * Reduced motion: reveal skipped and the open/close is instant.
  */
-export default function FAQ() {
+export default function FAQ({
+  items = faq,
+  eyebrow = faqEyebrow,
+  intro = faqIntro,
+  headingTop = "Questions,",
+  headingBottom = "Answered",
+  className = "",
+  showHairline = true,
+}: {
+  items?: QA[];
+  eyebrow?: string;
+  intro?: string;
+  headingTop?: string;
+  headingBottom?: string;
+  className?: string;
+  showHairline?: boolean;
+} = {}) {
   const root = useRef<HTMLElement>(null);
   const [open, setOpen] = useState<number | null>(null);
   const reduced = useReducedMotion();
@@ -47,23 +63,23 @@ export default function FAQ() {
   );
 
   return (
-    <section ref={root} id="faq" className="relative py-24 md:py-32">
-      <Hairline className="absolute inset-x-0 top-0" />
+    <section ref={root} id="faq" className={`relative py-24 md:py-32 ${className}`}>
+      {showHairline && <Hairline className="absolute inset-x-0 top-0" />}
       <div className="shell grid gap-12 md:grid-cols-[0.4fr_0.6fr]">
         {/* left sticky header */}
         <div className="faq-head md:sticky md:top-32 md:h-max">
           <h2 className="font-display text-[clamp(36px,5vw,56px)] font-extrabold uppercase leading-none tracking-tight text-ink">
-            Questions,
+            {headingTop}
             <br />
-            Answered
+            {headingBottom}
           </h2>
-          <p className="eyebrow mt-6">{faqEyebrow}</p>
-          <p className="mt-3 text-ink-3">{faqIntro}</p>
+          <p className="eyebrow mt-6">{eyebrow}</p>
+          <p className="mt-3 text-ink-3">{intro}</p>
         </div>
 
         {/* right accordion */}
         <div className="faq-list flex flex-col">
-          {faq.map((item, i) => {
+          {items.map((item, i) => {
             const isOpen = open === i;
             return (
               <div key={item.q} className="faq-item border-t border-border">

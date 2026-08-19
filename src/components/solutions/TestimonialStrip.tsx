@@ -9,29 +9,50 @@ import type { SolutionTestimonial } from "@/lib/solutions/types";
  * The second pass is `aria-hidden` so screen readers and search read each quote
  * once. Hover or keyboard focus inside the strip pauses it; under reduced motion
  * the animation is off and the strip becomes a normal horizontal scroller.
+ *
+ * `quoted={false}` renders scenario copy without quotation marks, for pages
+ * that carry labelled operating scenarios rather than attributed quotes.
  */
-export default function TestimonialStrip({ items }: { items: SolutionTestimonial[] }) {
+export default function TestimonialStrip({
+  items,
+  quoted = true,
+  label = "Client testimonials",
+}: {
+  items: SolutionTestimonial[];
+  quoted?: boolean;
+  label?: string;
+}) {
   return (
-    <div className="marquee-wrap li-reveal" tabIndex={0} role="group" aria-label="Client testimonials">
+    <div className="marquee-wrap li-reveal" tabIndex={0} role="group" aria-label={label}>
       <ul className="marquee list-none">
         {items.map((t) => (
-          <Card key={t.name} t={t} />
+          <Card key={t.name} t={t} quoted={quoted} />
         ))}
         {items.map((t) => (
-          <Card key={`${t.name}-dup`} t={t} duplicate />
+          <Card key={`${t.name}-dup`} t={t} quoted={quoted} duplicate />
         ))}
       </ul>
     </div>
   );
 }
 
-function Card({ t, duplicate = false }: { t: SolutionTestimonial; duplicate?: boolean }) {
+function Card({
+  t,
+  quoted,
+  duplicate = false,
+}: {
+  t: SolutionTestimonial;
+  quoted: boolean;
+  duplicate?: boolean;
+}) {
   return (
     <li
       aria-hidden={duplicate || undefined}
       className="mx-3 flex w-[min(82vw,440px)] shrink-0 flex-col justify-between border border-border bg-surface p-6 md:p-8"
     >
-      <p className="text-[15px] leading-[1.75] text-ink-2">&ldquo;{t.quote}&rdquo;</p>
+      <p className="text-[15px] leading-[1.75] text-ink-2">
+        {quoted ? <>&ldquo;{t.quote}&rdquo;</> : t.quote}
+      </p>
 
       <div className="mt-8 flex items-center gap-4 border-t border-border pt-5">
         <span

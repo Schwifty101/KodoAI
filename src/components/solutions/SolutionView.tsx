@@ -11,6 +11,7 @@ import BookCallButton from "@/components/ui/BookCallButton";
 import Button from "@/components/ui/Button";
 import FlowDiagram from "@/components/solutions/FlowDiagram";
 import TestimonialStrip from "@/components/solutions/TestimonialStrip";
+import FAQ from "@/components/sections/FAQ";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -186,9 +187,26 @@ export default function SolutionView({ solution }: { solution: Solution }) {
         {/* Full-bleed on purpose: the strip should run off both edges, so it sits
             outside `.shell` rather than inside its max-width. */}
         <div className="mt-14 md:mt-16">
-          <TestimonialStrip items={p.testimonials.items} />
+          <TestimonialStrip
+            items={p.testimonials.items}
+            quoted={p.testimonials.quoted}
+            label={p.testimonials.label}
+          />
         </div>
       </section>
+
+      {/* ═══════════════  FAQ  ═══════════════ */}
+      {p.faq && (
+        <FAQ
+          items={p.faq.items}
+          eyebrow={p.faq.eyebrow}
+          intro={p.faq.intro}
+          headingTop={p.faq.headingTop}
+          headingBottom={p.faq.headingBottom}
+          className="border-b border-border"
+          showHairline={false}
+        />
+      )}
 
       {/* ═══════════════  CTA  ═══════════════ */}
       <section className="li-section py-24 text-center md:py-36">

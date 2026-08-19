@@ -7,7 +7,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const solutionRoutes: MetadataRoute.Sitemap = solutions.map((s) => ({
     url: `${baseUrl}/${s.slug}`,
-    lastModified: new Date("2026-08-18"),
+    lastModified: new Date("2026-08-19"),
     changeFrequency: "monthly",
     priority: 0.7,
   }));

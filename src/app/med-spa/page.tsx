@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     title: medSpa.meta.title,
     description: medSpa.meta.description,
     type: "article",
+    images: ["/reference/banner.png"],
   },
 };
 
