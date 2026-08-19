@@ -10,22 +10,21 @@
 // collected and routed to a licensed reviewer, never judged.
 // -----------------------------------------------------------------------------
 
-import { CTA_BODY } from "@/lib/caseStudies";
 import type { Solution } from "@/lib/solutions/types";
 
 export const medSpa: Solution = {
   slug: "med-spa",
   navLabel: "MED SPA",
   meta: {
-    title: "Governed Med Spa Booking: kodoAI",
+    title: "Med Spa Intake, Booking and Front Desk Automation | KodoAI",
     description:
-      "The integration and decision-governance layer between your AI receptionist, booking system, patient records and provider approvals.",
+      "Grow without growing the front desk. Custom intake, screening prep and booking orchestration for multi-provider med spas across the US and Canada.",
   },
 
   teaser: {
     eyebrow: "// MED SPA OPERATIONS",
-    title: "GOVERNED MED SPA BOOKING",
-    body: "An aesthetics lead is worth a consult in minutes, not the next business day. We build the layer between the AI receptionist, booking system, patient records and provider approvals, so agents fill the calendar and your providers keep every clinical call.",
+    title: "MED SPA INTAKE AND BOOKING",
+    body: "Your clinic already paid for the inquiry. What it loses is the hour between a DM landing and someone answering it. We build the layer between the AI receptionist, booking system, patient records and provider approvals, so agents fill the calendar and your providers keep every clinical call.",
     capabilities: [
       "MULTI-CHANNEL CAPTURE",
       "SCREENING PREPARATION",
@@ -36,28 +35,28 @@ export const medSpa: Solution = {
   },
 
   hero: {
-    eyebrow: "// MED SPA OPERATIONS",
-    title: "HIGH-INTENT LEAD CAPTURE",
-    titleSub: "AND GOVERNED BOOKING",
+    eyebrow: "// MED SPA INTAKE AND BOOKING ORCHESTRATION",
+    title: "GROW WITHOUT GROWING",
+    titleSub: "THE FRONT DESK",
     ambient: "MEDSPA",
-    lead: "An aesthetics inquiry is worth a consult within minutes, and the caller is already messaging three other clinics. KodoAI builds the integration and decision-governance layer between the clinic's AI receptionist, booking system, patient records and treatment approvals, so inquiries move at the speed of the ad spend while clinical judgement stays with the provider.",
-    primaryCta: "AUDIT OUR BOOKING FLOW",
+    lead: "Your clinic already paid for the inquiry. What it loses is the hour between a DM landing and someone answering it, and the coordinator hour you add every time volume rises. KodoAI builds the decision-governance layer between your AI receptionist, booking system, patient records and provider approvals, for multi-provider med spas across the US and Canada.",
+    primaryCta: "BOOK A CLINIC AUDIT",
     secondaryCta: "SEE THE ORCHESTRATION LAYER",
   },
 
-  capabilitiesEyebrow: "// WHAT THE SYSTEM CAN COORDINATE",
+  capabilitiesEyebrow: "// WHAT THE LAYER COORDINATES FOR YOU",
   capabilitiesHeading: {
     lead: ["SIX CAPABILITIES."],
     tail: "ONE GOVERNED LAYER.",
     tailAccent: false,
   },
   capabilities: [
-    { num: "01", title: "Multi-Channel Capture", description: "Bring calls, web forms, site chat, social messages and campaign leads into one patient inquiry record. Capture consent, contact preference and the source that paid for the lead." },
-    { num: "02", title: "Treatment Interest Matching", description: "Map what the caller asked for onto the clinic's actual service menu, including the treatments a given location and provider are certified and equipped to deliver." },
-    { num: "03", title: "Screening Preparation", description: "Collect the answers the clinic's own screening form asks for: medications, pregnancy, prior treatments, allergies, recent procedures. Anything on the clinic's flag list routes to a licensed reviewer. The system never clears a contraindication." },
-    { num: "04", title: "Deterministic Booking Rules", description: "Apply the clinic's approved rules for provider license, device and room availability, treatment duration, recovery buffer and location. AI interprets the inquiry; the slot follows controlled logic." },
-    { num: "05", title: "Deposit and Confirmation Gating", description: "Hold the slot, take the deposit and send prep instructions only after the required approval state is recorded. Nothing is confirmed to a patient before the clinic has confirmed it internally." },
-    { num: "06", title: "No-Show Recovery and Audit", description: "Log inputs, rules, flags and overrides. Run the reminder cadence, backfill cancellations from the waitlist, and stop safely when a screening answer or a required field is missing." },
+    { num: "01", title: "Multi-Channel Capture", description: "Calls, forms, site chat, Instagram DMs and campaign leads become one patient inquiry record instead of five inboxes nobody owns. Consent, contact preference and the source that paid for the lead stay attached." },
+    { num: "02", title: "Treatment Interest Matching", description: "What the caller asked for gets mapped onto what this location can actually deliver: the service menu, the devices in the room and the providers certified to use them. No consult booked that cannot be honored." },
+    { num: "03", title: "Screening Preparation", description: "Your screening questions get asked and recorded before a provider's time is spent. Anything on your flag list goes to a licensed reviewer. The system records answers. It never clears a contraindication." },
+    { num: "04", title: "Deterministic Booking Rules", description: "Provider license, device availability, room, treatment duration, recovery buffer and location all resolve against your approved rules. AI reads the inquiry. The slot follows fixed logic your manager can inspect and change." },
+    { num: "05", title: "Deposit and Confirmation Gating", description: "Hold the slot, take the deposit and send prep instructions only once the required approval is recorded. Nothing is confirmed to a patient before the clinic has confirmed it internally." },
+    { num: "06", title: "No-Show Recovery and Audit", description: "Run the reminder cadence, backfill same-day cancellations from the waitlist, and log every input, rule, flag and override. When a screening answer is missing, the workflow stops and alerts a named owner." },
   ],
 
   orchestration: {
@@ -70,11 +69,11 @@ export const medSpa: Solution = {
     columns: { stage: "Stage", whatHappens: "What happens", controlPoint: "Control point" },
     rows: [
       { stage: "Multi-channel capture", whatHappens: "Approved channels create or update one patient inquiry record", controlPoint: "Consent, contact preference, source and duplicate checks" },
-      { stage: "Interest matching", whatHappens: "The requested treatment is mapped onto the clinic's service menu", controlPoint: "Offered services, provider certification and device availability" },
-      { stage: "Screening preparation", whatHappens: "Intake answers are gathered against the clinic's own screening form", controlPoint: "Flagged answers routed to a licensed reviewer" },
-      { stage: "Booking", whatHappens: "Clinic rules select provider, room, device and duration", controlPoint: "Deterministic logic and exception queue" },
-      { stage: "Decision", whatHappens: "The designated provider or manager reviews fit and screening flags", controlPoint: "Human or clinical approval" },
-      { stage: "Confirmation", whatHappens: "Approved bookings take the deposit, send prep instructions and set reminders", controlPoint: "Recorded approval before execution" },
+      { stage: "Interest matching", whatHappens: "The requested treatment is mapped onto this location's service menu", controlPoint: "Offered services, provider certification, device on site" },
+      { stage: "Screening preparation", whatHappens: "Answers are gathered against the clinic's own screening form", controlPoint: "Flagged answers routed to a licensed reviewer" },
+      { stage: "Booking", whatHappens: "Clinic rules select provider, room, device and duration", controlPoint: "Deterministic logic, with exceptions queued" },
+      { stage: "Decision", whatHappens: "The designated provider or manager reviews fit and screening flags", controlPoint: "Human or clinical approval, always" },
+      { stage: "Confirmation", whatHappens: "Approved bookings take the deposit and send prep instructions", controlPoint: "Recorded approval before anything executes" },
     ],
   },
 
@@ -86,8 +85,8 @@ export const medSpa: Solution = {
       tailAccent: false,
     },
     intro:
-      "Everything before the clinic's own core system runs as a perimeter of narrow agents, each doing one job on the way to a single clean record. Nothing here decides whether a patient is treated.",
-    caption: "Inbound booking perimeter: capture, qualification and identity agents feeding one patient inquiry record, with stalled inquiries returning to the capture stage before the record crosses into the clinic's core system.",
+      "Everything before your own core system runs as a perimeter of narrow agents, each doing one job on the way to a single clean record. Nothing in this perimeter decides whether a patient is treated.",
+    caption: "Inbound booking perimeter: channel capture, qualification and identity agents feeding one patient inquiry record, with stalled inquiries returning to capture before the record crosses into the clinic's core system.",
     source: {
       label: "// INBOUND DEMAND",
       items: ["Phone calls", "Web forms", "Site chat", "Social messages", "Paid campaigns"],
@@ -98,10 +97,10 @@ export const medSpa: Solution = {
         title: "Channel Capture",
         caption: "// THE FRONT DOOR",
         nodes: [
-          { title: "Voice agent", detail: "Answers inbound calls live or after hours, captures what the caller wants done and opens the record." },
-          { title: "SMS agent", detail: "Two-way texting for the callers who will not pick up, plus nudges on consult forms left half finished." },
+          { title: "Voice agent", detail: "Answers inbound calls live or after hours, captures what the caller wants done in their own words, and opens the record on the spot." },
+          { title: "SMS agent", detail: "Two-way texting for the callers who will not pick up, plus nudges on consult forms that were left half finished." },
           { title: "Social DM agent", detail: "Works the Instagram and Facebook inbox where most aesthetics inquiries now start, instead of leaving it to whoever has a spare minute." },
-          { title: "Missed-call recovery", detail: "Detects an unanswered or abandoned call and fires a callback or text before the caller books with the clinic down the road." },
+          { title: "Missed-call recovery", detail: "Detects an unanswered or abandoned call and fires a callback or text before the caller works down the rest of their list." },
         ],
       },
       {
@@ -109,7 +108,7 @@ export const medSpa: Solution = {
         title: "Qualification Layer",
         caption: "// CONVERSATION INTO STRUCTURED FACTS",
         nodes: [
-          { title: "Treatment intent extraction", detail: "Turns call, chat and DM narrative into the structured fact set the clinic's booking rules are written against: treatment requested, area, prior work, timeline, budget signal." },
+          { title: "Treatment intent extraction", detail: "Turns call, chat and DM narrative into the structured fact set your booking rules are written against: treatment requested, area, prior work, timeline, budget signal." },
           { title: "Screening follow-up", detail: "Chases the patient for the screening answers the record still lacks, so nothing reaches the booking rules on a half-filled form." },
         ],
       },
@@ -118,8 +117,8 @@ export const medSpa: Solution = {
         title: "Identity and Deduplication",
         caption: "// CLEANING THE RECORD BEFORE IT MOVES",
         nodes: [
-          { title: "Deduplication agent", detail: "Matches each new inquiry against existing patients across every channel, so a returning client who DMs and then calls stays one record with their treatment history attached." },
-          { title: "Bilingual intake agent", detail: "Handles non-English inquiries at the point of first contact instead of parking the caller until a bilingual coordinator is free." },
+          { title: "Deduplication agent", detail: "Matches each new inquiry against existing patients across every channel, so a returning client who DMs and then calls stays one record with her treatment history attached." },
+          { title: "Bilingual intake agent", detail: "Handles non-English inquiries at the point of first contact, rather than parking the caller until a bilingual coordinator is free." },
         ],
       },
     ],
@@ -132,79 +131,123 @@ export const medSpa: Solution = {
       eyebrow: "// CONVERGENCE",
       title: "One Unified Patient Inquiry Record",
       detail:
-        "Source, consent, contact preference, treatment interest, screening answers and the full channel history in one place, with campaign attribution attached from the first touch.",
+        "Source, consent, contact preference, treatment interest, screening answers and the full channel history in one place, with campaign attribution attached from the first touch through to the invoice.",
     },
     core: {
       eyebrow: "// PAST THE PERIMETER: THE CLINIC'S CORE SYSTEM",
       steps: ["Screening review", "Provider decision", "Booking and handoff"],
       detail:
-        "From here the clinic's own protocols and approvals govern every step. The agents prepare the appointment; they never approve the treatment.",
+        "From here your own protocols and approvals govern every step. The agents prepare the appointment. They never approve the treatment.",
     },
   },
 
   fit: {
-    eyebrow: "// DESIGNED FOR CLINICS WHERE AN UNANSWERED LEAD IS PAID TWICE",
-    intro: "The strongest fit is a multi-provider clinic spending real money on demand, taking inquiries across phone, forms and social, running treatments that carry screening requirements, and losing bookings to response time rather than to price.",
+    eyebrow: "// BUILT FOR CLINICS WHERE THE FRONT DESK IS THE CEILING",
+    intro: "The strongest fit is a multi-provider clinic spending real money on demand, taking inquiries across phone, forms and social, running treatments that carry screening requirements, and adding coordinator hours every time volume rises.",
     industries: [
-      { title: "Injectables and Aesthetics", description: "Route neurotoxin and filler inquiries to a certified injector with the right slot length, keep the campaign source attached to the booking, and hold the consult until the screening answers are in front of a reviewer." },
-      { title: "Laser and Body Contouring", description: "Match the requested treatment to a device the location actually has and a provider licensed to run it. Enforce recovery buffers, package sessions and backfill cancellations from the waitlist the same morning." },
-      { title: "Wellness and Hormone Therapy", description: "Collect lab, medication and history questions before a provider's time is spent, flag anything the protocol calls out, and hold every recurring visit to the same approval gate as the first." },
+      { title: "Injectables and Aesthetics", description: "Neurotoxin and filler inquiries route to a certified injector with the right slot length, so a twenty-minute booking never blocks an hour-long room. The campaign source stays attached from the first DM through to the invoice." },
+      { title: "Laser and Body Contouring", description: "Match the request to a device this location actually has and a provider licensed to run it. Enforce recovery buffers, package sessions, and backfill the morning's cancellations from the waitlist before the room goes cold." },
+      { title: "Wellness and Hormone Therapy", description: "Lab, medication and history questions get collected before a provider's hour is committed. Recurring visits hit the same approval gate as the first, so a membership book does not quietly drift out of protocol." },
     ],
-    notRightFit: "Usually not the right fit for a single-provider studio with one phone line and a booking tool that already handles its exceptions well.",
+    notRightFit: "Usually the wrong fit for a single-provider studio with one phone line and a booking tool that already handles its own exceptions.",
   },
 
-  // PLACEHOLDER COPY: attributions are role + city only, no clinic names, so
-  // nothing here claims to be a named entity. Replace with real, approved quotes
-  // before this page is treated as social proof.
+  // Operating scenarios, not client quotes. `quoted: false` drops the quotation
+  // marks in TestimonialStrip; `name` carries the failure mode, so `initials()`
+  // still renders two characters. Do not reintroduce named attributions here
+  // without a real, consented quote behind each one.
   testimonials: {
-    eyebrow: "// FROM THE PEOPLE WORKING THE FRONT DESK",
+    eyebrow: "// FIVE PLACES THE BOOK LEAKS",
     heading: {
-      lead: ["WHAT THE CLINIC"],
-      tail: "TEAMS SAY.",
+      lead: ["WHERE THE BOOK"],
+      tail: "LEAKS MONEY.",
       tailAccent: false,
     },
+    quoted: false,
+    label: "Common booking failure points",
     items: [
       {
         quote:
-          "Anything that came in after we closed sat until the next morning, and by then half of them had booked somewhere else. Now they get a text back in about a minute and pick a time themselves. It still lands in front of me before anyone is confirmed.",
-        name: "Alyssa Prather",
-        role: "Front Desk Lead, injectables clinic",
-        location: "Scottsdale, AZ",
+          "An inquiry lands at 19:20. Nobody sees it until morning, and by then she has booked at the clinic two blocks over. Missed-call recovery texts back within the minute and lets her pick a time herself. It still reaches the front desk before anyone is confirmed.",
+        name: "AFTER-HOURS LOSS",
+        role: "Evening and weekend inbound",
+        location: "injectables",
       },
       {
         quote:
-          "More of our consults start in the Instagram inbox than on the phone, and nobody here has time to sit in it. The agent answers, pulls out what treatment they want, and hands me an inquiry instead of forty unread messages.",
-        name: "Renata Okafor",
-        role: "Practice Manager, two-location med spa",
-        location: "Atlanta, GA",
+          "More consults now start in the Instagram inbox than on the phone, and nobody has time to sit in it. The agent answers, extracts the treatment and the area of interest, and hands over one structured inquiry instead of forty unread messages and a guess at who is serious.",
+        name: "SOCIAL INBOX",
+        role: "Where aesthetics demand actually starts",
+        location: "DM-led clinics",
       },
       {
         quote:
-          "The screening questions were the part I would not hand over. It asks them, it writes the answers down, and anything on our flag list goes to a nurse. It has never once told a patient they were cleared.",
-        name: "Priya Raghunathan",
-        role: "Clinical Director, laser and body contouring",
-        location: "Fremont, CA",
+          "The screening questions are the part an owner will not hand over, and should not. The system asks them, records the answers, and routes anything on the clinic's flag list to a licensed reviewer. It does not decide, and it has never told a patient she was cleared.",
+        name: "SCREENING GATE",
+        role: "Collected and routed, never judged",
+        location: "provider-gated",
       },
       {
         quote:
-          "No-shows were running about a fifth of the book on laser days. Deposits go out with the confirmation now, and when someone cancels the waitlist fills the room the same morning.",
-        name: "Chase Delacroix",
-        role: "Owner, single-location med spa",
-        location: "Nashville, TN",
+          "A no-show on a laser day is a paid room sitting empty with a provider on the clock. Deposits go out with the confirmation, and when someone cancels the waitlist fills that slot the same morning instead of the following week.",
+        name: "NO-SHOW DRAG",
+        role: "Paid room, empty chair",
+        location: "device-heavy days",
       },
       {
         quote:
-          "Somebody calls about filler, fills out the consult form that night, then messages us on Saturday. That used to be three records and two of us texting the same person. It is one file now, with what she had done last spring sitting right there in it.",
-        name: "Meredith Kalinowski",
-        role: "Front Desk Manager, injectables and wellness clinic",
-        location: "Charlotte, NC",
+          "Someone calls about filler, fills in the consult form that night, then messages on Saturday. That used to be three records and two coordinators texting the same person. It is one file now, with what she had done last spring sitting in it.",
+        name: "DUPLICATE RECORDS",
+        role: "One patient across three channels",
+        location: "multi-channel intake",
+      },
+    ],
+  },
+
+  faq: {
+    eyebrow: "// FAQ",
+    intro: "What clinic owners ask before a build.",
+    headingTop: "Questions,",
+    headingBottom: "Answered",
+    items: [
+      {
+        q: "Does the system decide anything clinical?",
+        a: "No. It collects, structures and routes. Screening answers are recorded and anything on your flag list goes to a licensed reviewer. The system does not clear a contraindication, does not confirm a patient is a candidate, and does not tell anyone they are cleared. That judgment stays with your provider.",
+      },
+      {
+        q: "We already use Zenoti, Boulevard or Aesthetic Record. Why would we need this?",
+        a: "Usually you do not need us to replace them. Those platforms run the calendar and the chart well. What stays manual is the work in front of them: the Instagram inbox, the after-hours call, the same patient arriving on three channels, and getting a flagged screening answer in front of a reviewer before a room is committed.",
+      },
+      {
+        q: "Does this touch patient records or anything under HIPAA?",
+        a: "It can, and that is a design decision made with you rather than an afterthought. We map every data flow and subprocessor before go-live, work under least-privilege access by role and location, and sign a business associate agreement where one is required. We do not claim compliance on your behalf. Your own counsel or compliance reviewer signs off before live use.",
+      },
+      {
+        q: "Can it work the Instagram and Facebook inbox?",
+        a: "That is usually where the demand is. A social DM agent answers in the inbox, pulls out the treatment requested and the area of interest, and opens the same patient inquiry record a phone call would. The source stays attached, so you can see which campaign produced a booked treatment rather than a like.",
+      },
+      {
+        q: "What happens to no-shows and same-day cancellations?",
+        a: "Reminders run on your cadence, deposits gate the confirmation, and a cancellation triggers the waitlist rather than a note for someone to action later. The point is that a paid room with a provider on the clock does not sit empty because nobody had time to work the list that morning.",
+      },
+      {
+        q: "We run four locations with different devices and providers. Does that work?",
+        a: "That is the case the layer is built for. Device availability, provider certification, room, duration and recovery buffer are rules per location, not one global setting. A request a location cannot honor never becomes a booking there, and routing to a location that can is a rule rather than a phone call.",
+      },
+      {
+        q: "How is this different from a virtual assistant or an answering service?",
+        a: "A virtual assistant is a person doing coordination. This is the coordination itself, running whether or not anyone is at the desk, applying the same rules every time and leaving a record of why. Most clinics keep their people and stop adding more of them as volume rises. We are not selling headcount replacement.",
+      },
+      {
+        q: "How does an engagement start, and what does it cost?",
+        a: "It starts with a paid operations diagnostic: where inquiries arrive, what they cost, where they stall, and what a booked treatment is actually worth to you. Production scope and price follow from that rather than a rate card. Anything we build runs in shadow mode before it touches live booking.",
       },
     ],
   },
 
   cta: {
-    heading: { lead: ["WANT THE BOOKING"], tail: "LAYER LIVE?", tailAccent: true },
-    body: CTA_BODY,
-    label: "AUDIT OUR BOOKING FLOW",
+    heading: { lead: ["WANT THIS RUNNING"], tail: "IN YOUR CLINIC?", tailAccent: true },
+    body: "Every engagement starts with a paid diagnostic and a shadow-mode test before anything touches live booking. You work directly with a senior engineer, not a project manager relaying messages to an offshore team.",
+    label: "BOOK A CLINIC AUDIT",
   },
 };

@@ -32,7 +32,8 @@ export const site = {
 export const nav: NavLink[] = [
   { label: "ABOUT", href: "#quotation" },
   { label: "PROCESS", href: "#process" },
-  { label: "SOLUTIONS", href: "#solutions" },
+  { label: "LEGAL", href: "/legal-intake" },
+  { label: "MED SPA", href: "/med-spa" },
   { label: "SERVICES", href: "#services" },
   { label: "FAQS", href: "#faq" },
 ];
@@ -265,8 +266,9 @@ export const footer = {
   nav: [
     { label: "ABOUT", href: "#quotation" },
     { label: "PROCESS", href: "#process" },
-    { label: "SOLUTIONS", href: "#solutions" },
-      { label: "SERVICES", href: "#services" },
+    { label: "LEGAL", href: "/legal-intake" },
+    { label: "MED SPA", href: "/med-spa" },
+    { label: "SERVICES", href: "#services" },
     { label: "FAQS", href: "#faq" },
     { label: "CONTACT", href: "#footer" },
   ] as NavLink[],

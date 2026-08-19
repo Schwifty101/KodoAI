@@ -118,7 +118,7 @@ export default function Footer() {
               </a>
             </p>
             <ul className="mb-6 flex flex-col gap-2 font-mono text-sm text-ink-2">
-              {footer.sites.map((s) => (
+              {/* {footer.sites.map((s) => (
                 <li key={s.href}>
                   <a
                     href={s.href}
@@ -129,7 +129,7 @@ export default function Footer() {
                     {s.label} ↗
                   </a>
                 </li>
-              ))}
+              ))} */}
             </ul>
             <div className="mb-10 text-ink-3">
               {site.location.map((line) => (
