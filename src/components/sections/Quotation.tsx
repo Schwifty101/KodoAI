@@ -19,6 +19,7 @@ const WORDS = splitWords(quotation.text, quotation.highlights);
  */
 export default function Quotation() {
   const root = useRef<HTMLElement>(null);
+  const quoteRef = useRef<HTMLQuoteElement>(null);
 
   useGSAP(
     () => {
@@ -28,24 +29,35 @@ export default function Quotation() {
       const muted =
         getComputedStyle(document.documentElement).getPropertyValue("--muted").trim() || "#5e5c52";
 
-      gsap.from(".q-word", {
-        color: muted,
-        ease: "none",
-        stagger: 0.4,
+      const tl = gsap.timeline({
         scrollTrigger: {
-          trigger: root.current,
-          start: "top 75%",
-          end: "bottom 55%",
-          scrub: 1,
+          trigger: quoteRef.current,
+          start: "top 90%",
+          end: "bottom 65%",
+          scrub: 0.3,
         },
       });
 
-      gsap.from(".q-attr", {
-        opacity: 0,
-        y: 12,
-        duration: 0.6,
-        scrollTrigger: { trigger: root.current, start: "bottom 65%", once: true },
+      tl.from(".q-word", {
+        color: muted,
+        ease: "none",
+        stagger: {
+          each: 0.08,
+          ease: "none",
+        },
+        duration: 0.15,
       });
+
+      tl.from(
+        ".q-attr",
+        {
+          opacity: 0,
+          y: 12,
+          duration: 0.4,
+          ease: "power2.out",
+        },
+        "-=0.1",
+      );
     },
     { scope: root },
   );
@@ -55,7 +67,10 @@ export default function Quotation() {
       <Hairline className="absolute inset-x-0 top-0" />
       <div className="shell">
         <p className="eyebrow mb-10">{quotation.eyebrow}</p>
-        <blockquote className="max-w-[1100px] font-display text-[clamp(40px,6vw,96px)] font-extrabold uppercase leading-none tracking-tight">
+        <blockquote
+          ref={quoteRef}
+          className="max-w-[1100px] font-display text-[clamp(40px,6vw,96px)] font-extrabold uppercase leading-none tracking-tight"
+        >
           {WORDS.map((w, i) => (
             <span key={i} className={w.highlight ? "q-word text-accent" : "q-word text-ink"}>
               {w.text}{" "}
