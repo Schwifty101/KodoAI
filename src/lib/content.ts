@@ -47,7 +47,7 @@ export const socials: Social[] = [
 export const hero = {
   eyebrow: "// CUSTOM AI AUTOMATION AND ORCHESTRATION",
   headline: "BUILD THE SYSTEM YOUR TEAM KEEPS RUNNING BY HAND.",
-  sub: "Custom AI agents and internal software for any business: operations, sales, support, finance, marketing.",
+  sub: "Custom AI agents and operational software for Law Firms & Medical Spas: automating intake, client communications, billing, and internal workflows.",
 };
 
 // -- 02 Quotation --------------------------------------------------------------
