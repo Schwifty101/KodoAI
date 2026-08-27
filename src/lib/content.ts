@@ -39,15 +39,14 @@ export const nav: NavLink[] = [
 ];
 
 export const socials: Social[] = [
-  { label: "LINKEDIN", href: "https://www.linkedin.com/in/soban-ahmad-malik/" },
+  { label: "LINKEDIN", href: "https://www.linkedin.com/company/kodoai-xyz" },
 ];
 
 // -- 01 Hero -------------------------------------------------------------------
 
 export const hero = {
-  eyebrow: "// CUSTOM AI AUTOMATION AND ORCHESTRATION",
-  headline: "BUILD THE SYSTEM YOUR TEAM KEEPS RUNNING BY HAND.",
-  sub: "Custom AI agents and operational software for Law Firms & Medical Spas: automating intake, client communications, billing, and internal workflows.",
+  headline: "CUSTOM AI AGENTS & OPERATIONAL SOFTWARE\nFOR LAW FIRMS AND MED SPAS.",
+  sub: "We engineer autonomous intake, conflict-ready prep, multi-channel scheduling, and billing orchestration with human-in-the-loop governance.",
 };
 
 // -- 02 Quotation --------------------------------------------------------------

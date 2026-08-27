@@ -62,9 +62,9 @@ export default function SmoothScroll({ children }: { children: React.ReactNode }
       ref={lenisRef}
       options={{
         autoRaf: false, // GSAP ticker drives it
-        lerp: 0.09, // heavy, luxurious feel
-        wheelMultiplier: 1,
-        touchMultiplier: 1.4,
+        lerp: 0.06, // silkier, more weighted smoothing
+        wheelMultiplier: 0.85, // calmer scroll pace per wheel event
+        touchMultiplier: 1.2,
         anchors: true, // in-page #links smooth-scroll instead of jumping
       }}
     >

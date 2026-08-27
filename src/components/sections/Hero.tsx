@@ -104,16 +104,12 @@ export default function Hero() {
 
       {/* z-2 — center block */}
       <div ref={centerRef} className="relative z-[2] flex flex-col items-center px-6 text-center">
-        {/* Description: both lines share one font, size and muted tone — kept small
-            and quiet so the giant wordmark carries the hero. Nudged up toward the
-            top third. The persistent -10vh lift lives on the outer wrapper so the
-            entrance `y` on .hero-desc doesn't fight it. */}
-        <div className="max-w-[44ch] -translate-y-[10vh]">
-          <div className="hero-desc flex flex-col gap-2 text-ink-3">
-            <h2 className="text-sm font-normal leading-relaxed tracking-wide md:text-base">
+        <div className="max-w-[640px] -translate-y-[10vh] md:-translate-y-[12vh]">
+          <div className="hero-desc flex flex-col items-center gap-3">
+            <h2 className="whitespace-pre-line font-display text-[clamp(18px,2.2vw,28px)] font-bold uppercase leading-tight tracking-tight text-ink">
               {hero.headline}
             </h2>
-            <p className="text-sm font-normal leading-relaxed tracking-wide md:text-base">
+            <p className="max-w-[48ch] font-sans text-xs leading-relaxed text-ink-2 md:text-sm">
               {hero.sub}
             </p>
           </div>
