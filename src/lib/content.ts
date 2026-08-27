@@ -239,7 +239,7 @@ export const faq: QA[] = [
   },
   {
     q: "Do you work only with law firms?",
-    a: "No. KodoAI builds automation and orchestration systems across industries. Legal intake is a specialized capability within the broader practice, shaped by our experience building legal operations software and approval-gated systems.",
+    a: "No. KodoAI builds automation and orchestration systems across industries. Legal AI infrastructure is a specialized capability within the broader practice, shaped by our experience building legal operations software, AI receptionists, and approval-gated systems.",
   },
 ];
 

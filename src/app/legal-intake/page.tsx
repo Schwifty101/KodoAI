@@ -31,20 +31,20 @@ const jsonLd = {
     {
       "@type": "Service",
       "@id": `${PAGE_URL}#service`,
-      name: "Personal Injury Intake Orchestration",
-      serviceType: "Legal intake orchestration, conflict preparation and routing automation",
+      name: "Law Firm AI Infrastructure & Operations Automation",
+      serviceType: "Legal AI receptionists, custom legal CRMs, case management sync, and governed intake",
       url: PAGE_URL,
       description:
-        "Custom intake orchestration for plaintiff personal injury firms. One inquiry record across channels, conflict-ready preparation with source evidence, deterministic routing on firm-approved rules, and engagement that fires only after recorded human approval.",
+        "Full-firm AI infrastructure for modern law firms. 24/7 AI receptionists, custom legal CRMs, seamless case management integrations, conflict-ready prep, deterministic routing, and approval-gated engagement.",
       provider: { "@type": "Organization", name: "kodoAI", url: SITE_URL, email: "soban@kodoai.xyz" },
       areaServed: [
         { "@type": "Country", name: "United States" },
         { "@type": "Country", name: "Canada" },
       ],
-      audience: { "@type": "Audience", audienceType: "Plaintiff personal injury law firms" },
+      audience: { "@type": "Audience", audienceType: "Law firms and legal practices" },
       hasOfferCatalog: {
         "@type": "OfferCatalog",
-        name: "Intake orchestration capabilities",
+        name: "Law firm AI infrastructure capabilities",
         itemListElement: legalIntake.capabilities.map((c) => ({
           "@type": "Offer",
           itemOffered: { "@type": "Service", name: c.title },
@@ -64,7 +64,7 @@ const jsonLd = {
       "@type": "BreadcrumbList",
       itemListElement: [
         { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_URL}/` },
-        { "@type": "ListItem", position: 2, name: "Legal Intake", item: PAGE_URL },
+        { "@type": "ListItem", position: 2, name: "Legal Infrastructure", item: PAGE_URL },
       ],
     },
   ],
