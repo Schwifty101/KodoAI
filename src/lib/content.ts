@@ -45,7 +45,7 @@ export const socials: Social[] = [
 // -- 01 Hero -------------------------------------------------------------------
 
 export const hero = {
-  headline: "CUSTOM AI AGENTS & OPERATIONAL SOFTWARE\nFOR LAW FIRMS AND MED SPAS.",
+  headline: "CUSTOM AI AGENTS & OPERATIONAL SOFTWARE\n",
   sub: "We engineer autonomous intake, conflict-ready prep, multi-channel scheduling, and billing orchestration with human-in-the-loop governance.",
 };
 
